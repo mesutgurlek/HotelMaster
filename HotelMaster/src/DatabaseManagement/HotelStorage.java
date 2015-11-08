@@ -10,6 +10,7 @@ import java.util.*;
  * Created by Heaven on 11/6/2015.
  */
 public class HotelStorage {
+    //Main Database Management Class to connect Controllers and Database
     private void addRoom(int roomNo, String roomType, String roomStat, int floorNo, int adultCount, int childCount, double dailyPrice, String extraInfo){
         RoomStorage roomStorage = new RoomStorage();
         roomStorage.insertRoom(roomNo, roomType, roomStat, floorNo, adultCount, childCount, dailyPrice, extraInfo);
