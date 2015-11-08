@@ -1,0 +1,110 @@
+package DatabaseManagement;
+import java.sql.*;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+/**
+ * Created by Heaven on 11/6/2015.
+ */
+public class HotelStorage {
+    private void addRoom(int roomNo, String roomType, String roomStat, int floorNo, int adultCount, int childCount, double dailyPrice, String extraInfo){
+        RoomStorage roomStorage = new RoomStorage();
+        roomStorage.insertRoom(roomNo, roomType, roomStat, floorNo, adultCount, childCount, dailyPrice, extraInfo);
+    }
+
+    private static void deleteRoom(int roomNo){
+        RoomStorage roomStorage = new RoomStorage();
+        roomStorage.deleteRoom(roomNo);
+    }
+
+    private static void getRooms(){
+        RoomStorage roomStorage = new RoomStorage();
+        roomStorage.getRooms();
+    }
+
+    private static void getAccounts(){
+        LoginStorage loginStorage = new LoginStorage();
+        loginStorage.getAccounts();
+    }
+
+    private static void addAccount(String name, String password){
+        LoginStorage loginStorage = new LoginStorage();
+        loginStorage.insertAccount(name, password);
+    }
+
+    private static void getReservations(){
+        ReservationStorage reservationStorage = new ReservationStorage();
+        reservationStorage.getReservations();
+    }
+
+    private static void addReservation(String name, String phoneNo, int roomNo, Date arrivalDate, Date departureDate, double totalCost){
+        ReservationStorage reservationStorage = new ReservationStorage();
+        reservationStorage.insertReservation(name, phoneNo, roomNo, arrivalDate, departureDate, totalCost);
+    }
+
+    private static void deleteReservation(int roomNo){
+        ReservationStorage reservationStorage = new ReservationStorage();
+        reservationStorage.deleteReservation(roomNo);
+    }
+
+    private static void getCustomers(){
+        CustomerStorage customerStorage = new CustomerStorage();
+        customerStorage.getCustomers();
+    }
+
+    private static void addCustomer(String name, String phoneNo, String purchaseType, int roomNo, Date arrivalDate, Date departureDate, double totalCost) {
+        CustomerStorage customerStorage = new CustomerStorage();
+        customerStorage.insertCustomer(name, phoneNo, purchaseType, roomNo, arrivalDate, departureDate, totalCost);
+    }
+
+    private static void deleteCustomer(int roomNo){
+        CustomerStorage customerStorage = new CustomerStorage();
+        customerStorage.deleteCustomer(roomNo);
+    }
+
+
+    public static void main(String[] args) throws ParseException {
+       //RoomStorage Example
+       //addRoom();
+       //deleteRoom(124);
+       // getRooms();
+
+        //LoginStorage Evample
+       // addAccount("ali", "345");
+       // getAccounts();
+
+        //ReservationStorage Example
+        /*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String dateInString = "22-01-2015";
+        String dateInString2 = "14-02-2015";
+        java.util.Date date;
+        date = sdf.parse(dateInString);
+        Date date1 = new Date(date.getTime());
+        date = sdf.parse(dateInString2);
+        Date date2 = new Date(date.getTime());
+        addReservation("mesut", "05362365485", 102, date1, date2, 1020.5);
+        addReservation("ali", "125487963256", 103, date1, date2, 1111.7);*/
+        //deleteReservation(102);
+       // getReservations();
+
+        //CustomerStorage Example
+        /*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String dateInString = "22-01-2015";
+        String dateInString2 = "14-02-2015";
+        java.util.Date date;
+        date = sdf.parse(dateInString);
+        Date date1 = new Date(date.getTime());
+        date = sdf.parse(dateInString2);
+        Date date2 = new Date(date.getTime());
+        addCustomer("mesut", "05362365485", "creditCard", 102, date1, date2, 1020.5);
+        addCustomer("ali", "125487963256", "cash", 103, date1, date2, 1111.7);*/
+        //deleteCustomer(103);
+        getCustomers();
+
+    }
+
+
+}

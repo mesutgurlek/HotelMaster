@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - HotelMaster@localhost" uuid="478c9c20-71c0-479f-bd25-5302e7702d77">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>hotelmaster.*</schema-pattern>
+      <default-schemas>hotelmaster.*</default-schemas>
+    </data-source>
+  </component>
+</project>
