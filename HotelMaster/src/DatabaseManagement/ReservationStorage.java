@@ -5,6 +5,7 @@ import java.sql.*;
 /**
  * Created by Heaven on 11/6/2015.
  */
+//sdsadsadsfrgh
 public class ReservationStorage {
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
