@@ -1,6 +1,7 @@
 package DatabaseManagement;
 
 import java.sql.*;
+import java.util.Hashtable;
 
 /**
  * Created by Heaven on 11/6/2015.
@@ -14,10 +15,11 @@ public class LoginStorage {
     static final String USER = "root";
     static final String PASS = "";
 
-    public void getAccounts(){
+    public Hashtable<String, String> getAccounts(){
         Connection conn = null;
         Statement stmt = null;
         PreparedStatement query = null;
+        Hashtable<String, String> accounts = new Hashtable<String, String>();
         try{
             //STEP 2: Register JDBC driver
             Class.forName(JDBC_DRIVER);
@@ -41,11 +43,13 @@ public class LoginStorage {
                 String name = rs.getString("name");
                 String password = rs.getString("password");
 
-                //Display values
-                System.out.print("name: " + name);
-                System.out.println(", password: " + password);
+                //Add values
+                if( !accounts.containsKey(name)){
+                    accounts.put(name, password);
+                }
             }
             rs.close();
+            return accounts;
         }catch(SQLException se){
             //Handle errors for JDBC
             se.printStackTrace();
@@ -66,6 +70,7 @@ public class LoginStorage {
                 se.printStackTrace();
             }//end finally try
         }//end try
+        return accounts;
     }
 
     public void insertAccount(String name, String password){
