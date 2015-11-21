@@ -22,7 +22,7 @@ public class Hotel {
     public ArrayList<Reservation> getReservations(){
         return null;
     }
-    
+
     public String getName() {
         return name;
     }

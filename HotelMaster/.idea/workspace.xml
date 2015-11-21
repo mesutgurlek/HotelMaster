@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/Cash.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/CreditCard.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/HotelStaff.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/Payment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/Reservation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/RoomStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelEntities/RoomType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/CustomerController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/HotelController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/ReservationController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/RoomController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelEntities/Room.java" afterPath="$PROJECT_DIR$/src/HotelEntities/Room.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" afterPath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" />
     </list>
     <ignored path="HotelMaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,46 +68,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/RoomType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/Room.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoomStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/RoomStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reservation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/Reservation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HotelStaff.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelEntities/HotelStaff.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -132,21 +88,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34189945">
-              <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/Payment.java">
+      <file leaf-file-name="HotelController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/HotelController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/RoomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReservationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/ReservationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/CustomerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1329609">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -172,7 +168,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="HotelEntities" />
       </map>
     </option>
   </component>
@@ -272,7 +268,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HotelEntities" />
+              <option name="myItemId" value="HotelManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,10 +283,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaseManagement" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -793,7 +785,7 @@
       <workItem from="1447024754647" duration="425000" />
       <workItem from="1447067872303" duration="3491000" />
       <workItem from="1448112843837" duration="606000" />
-      <workItem from="1448113785270" duration="3196000" />
+      <workItem from="1448113785270" duration="4568000" />
     </task>
     <task id="LOCAL-00001" summary="Database Management Branch">
       <created>1447025096335</created>
@@ -807,11 +799,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448114124982</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Hotel Entities Branch">
+      <created>1448117033794</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1448117033794</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41507000" />
+    <option name="totallyTimeSpent" value="42879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,75 +878,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/ReservationStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1446979921180" expanded="true" signature="1152:1243" placeholder="SELECT name,..reservationstorage..." />
-            <marker date="1446979921180" expanded="true" signature="3522:3578" placeholder="insert into ..." />
-            <marker date="1446979921180" expanded="true" signature="5258:5305" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/RoomStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding>
-            <element signature="method#getRooms#0;class#RoomStorage#0" expanded="false" />
-            <element signature="method#insertRoom#0;class#RoomStorage#0" expanded="false" />
-            <marker date="1447073715365" expanded="true" signature="1281:1374" placeholder="SELECT roomN..roomstorage..." />
-            <marker date="1447073715365" expanded="true" signature="1281:1385" placeholder="SELECT roomN..roomstorage..." />
-            <marker date="1447073715365" expanded="true" signature="3891:3946" placeholder="insert into ..." />
-            <marker date="1447073715365" expanded="true" signature="5700:5738" placeholder="DELETE FROM ..." />
-            <marker date="1447073715365" expanded="true" signature="5700:5740" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/LoginStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="method#getAccounts#0;class#LoginStorage#0" expanded="false" />
-            <element signature="method#insertAccount#0;class#LoginStorage#0" expanded="false" />
-            <marker date="1446974282958" expanded="true" signature="1142:1181" placeholder="SELECT name,..loginstorage..." />
-            <marker date="1446974282958" expanded="true" signature="2895:2933" placeholder="insert into ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/CustomerStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-          <folding>
-            <element signature="method#getCustomers#0;class#CustomerStorage#0" expanded="false" />
-            <element signature="method#insertCustomer#0;class#CustomerStorage#0" expanded="false" />
-            <element signature="method#deleteCustomer#0;class#CustomerStorage#0" expanded="false" />
-            <marker date="1446979048441" expanded="true" signature="1146:1233" placeholder="SELECT name,..reservationstorage..." />
-            <marker date="1446979048441" expanded="true" signature="1146:1248" placeholder="SELECT name,..customerstorage..." />
-            <marker date="1446979048441" expanded="true" signature="3684:3740" placeholder="insert into ..." />
-            <marker date="1446979048441" expanded="true" signature="5463:5507" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/ReservationStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1446979921180" expanded="true" signature="1152:1243" placeholder="SELECT name,..reservationstorage..." />
-            <marker date="1446979921180" expanded="true" signature="3522:3578" placeholder="insert into ..." />
-            <marker date="1446979921180" expanded="true" signature="5258:5305" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/HotelStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1484,8 +1413,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34189945">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/HotelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/ReservationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1329609">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
