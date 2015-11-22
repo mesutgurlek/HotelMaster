@@ -11,7 +11,20 @@ public class Room {
     private double dailyPrice;
     private int childCount;
     private int adultCount;
+    private String extraInfo;
 
+
+    public Room(int roomNo, int floorNo, RoomType type, RoomStatus status, double dailyPrice, int childCount, int adultCount, String extraInfo) {
+        this.roomNo = roomNo;
+        this.floorNo = floorNo;
+        this.type = type;
+        this.status = status;
+        this.dailyPrice = dailyPrice;
+        this.childCount = childCount;
+
+        this.adultCount = adultCount;
+        this.extraInfo = extraInfo;
+    }
 
     public int getRoomNo() {
         return roomNo;
@@ -21,16 +34,13 @@ public class Room {
         return floorNo;
     }
 
+
     public RoomType getType() {
         return type;
     }
 
     public RoomStatus getStatus() {
         return status;
-    }
-
-    public double getDaillyPrice() {
-        return dailyPrice;
     }
 
     public void setRoomNo(int roomNo) {
@@ -49,10 +59,6 @@ public class Room {
         this.status = status;
     }
 
-    public void setDaillyPrice(double dailyPrice) {
-        this.dailyPrice = dailyPrice;
-    }
-
     public void setChildCount(int childCount) {
         this.childCount = childCount;
     }
@@ -60,6 +66,22 @@ public class Room {
     public void setAdultCount(int adultCount) {
         this.adultCount = adultCount;
     }
+    public double getDailyPrice() {
+        return dailyPrice;
+    }
+
+    public void setDailyPrice(double dailyPrice) {
+        this.dailyPrice = dailyPrice;
+    }
+
+    public String getExtraInfo() {
+        return extraInfo;
+    }
+
+    public void setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+    }
+
 
     public int getChildCount() {
         return childCount;

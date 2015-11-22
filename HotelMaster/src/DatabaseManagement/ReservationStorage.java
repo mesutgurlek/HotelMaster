@@ -1,6 +1,9 @@
 package DatabaseManagement;
 
+import HotelEntities.Reservation;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Heaven on 11/6/2015.
@@ -14,10 +17,11 @@ public class ReservationStorage {
     static final String USER = "root";
     static final String PASS = "";
 
-    public void getReservations(){
+    public ArrayList<Reservation> getReservations(){
         Connection conn = null;
         Statement stmt = null;
         PreparedStatement query = null;
+        ArrayList<Reservation> reservations = new ArrayList<>();
         try{
             //STEP 2: Register JDBC driver
             Class.forName(JDBC_DRIVER);
@@ -46,6 +50,8 @@ public class ReservationStorage {
                 double totalCost = rs.getDouble("totalCost");
 
                 //Display values
+                Reservation reservation = new Reservation(name, roomNo, arrivalDate, departureDate,phoneNo, totalCost);
+                reservations.add(reservation);
                 System.out.print("name: " + name);
                 System.out.print(", phone: " + phoneNo);
                 System.out.print(", room: " + roomNo);
@@ -74,6 +80,7 @@ public class ReservationStorage {
                 se.printStackTrace();
             }//end finally try
         }//end try
+        return reservations;
     }
 
     public void insertReservation(String name, String phoneNo, int roomNo, Date arrivalDate, Date departureDate, double totalCost){

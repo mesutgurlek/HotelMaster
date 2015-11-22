@@ -1,4 +1,6 @@
 package DatabaseManagement;
+import HotelEntities.*;
+
 import java.sql.*;
 import java.sql.Date;
 import java.text.DateFormat;
@@ -20,9 +22,9 @@ public class HotelStorage {
         roomStorage.deleteRoom(roomNo);
     }
 
-    public void getRooms(){
+    public ArrayList<Room> getRooms(){
         RoomStorage roomStorage = new RoomStorage();
-        roomStorage.getRooms();
+       return roomStorage.getRooms();
     }
 
     public void addAccount(String name, String password){
@@ -30,9 +32,9 @@ public class HotelStorage {
         loginStorage.insertAccount(name, password);
     }
 
-    public void getReservations(){
+    public ArrayList<Reservation> getReservations(){
         ReservationStorage reservationStorage = new ReservationStorage();
-        reservationStorage.getReservations();
+        return reservationStorage.getReservations();
     }
 
     public void addReservation(String name, String phoneNo, int roomNo, Date arrivalDate, Date departureDate, double totalCost){
@@ -45,9 +47,9 @@ public class HotelStorage {
         reservationStorage.deleteReservation(roomNo);
     }
 
-    public void getCustomers(){
+    public ArrayList<Customer> getCustomers(){
         CustomerStorage customerStorage = new CustomerStorage();
-        customerStorage.getCustomers();
+        return customerStorage.getCustomers();
     }
 
     public void addCustomer(String name, String phoneNo, String purchaseType, int roomNo, Date arrivalDate, Date departureDate, double totalCost) {
@@ -60,7 +62,7 @@ public class HotelStorage {
         customerStorage.deleteCustomer(roomNo);
     }
 
-    public static Hashtable<String, String> getStaffAccounts(){
+    public Hashtable<String, String> getStaffAccounts(){
         LoginStorage storage = new LoginStorage();
         return storage.getAccounts();
     }

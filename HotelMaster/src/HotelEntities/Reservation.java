@@ -1,6 +1,6 @@
 package HotelEntities;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by Heaven on 11/21/2015.
@@ -14,20 +14,21 @@ public class Reservation {
     private String phoneNo;
     private double totalCost;
 
+    public Reservation(String personName, int reservedRoomNo, Date arrivalDate, Date departureDate, String phoneNo, double totalCost) {
+        this.personName = personName;
+        this.reservedRoomNo = reservedRoomNo;
+        this.arrivalDate = arrivalDate;
+        this.departureDate = departureDate;
+        this.phoneNo = phoneNo;
+        this.totalCost = totalCost;
+    }
+
     public String getPersonName() {
         return personName;
     }
 
     public void setPersonName(String personName) {
         this.personName = personName;
-    }
-
-    public String getPersonSurname() {
-        return personSurname;
-    }
-
-    public void setPersonSurname(String personSurname) {
-        this.personSurname = personSurname;
     }
 
     public int getReservedRoomNo() {

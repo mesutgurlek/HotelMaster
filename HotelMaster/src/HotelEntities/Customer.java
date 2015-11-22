@@ -1,6 +1,6 @@
 package HotelEntities;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  * Created by Heaven on 11/21/2015.
@@ -9,11 +9,25 @@ public class Customer {
     private String name;
     private String surname;
     private int roomNo;
-    private Payment payment;
+    private String payment;
     private Date arrivalDate;
     private Date departureDate;
     private double totalCost;
     private String phoneNo;
+
+    public Customer(String name, int roomNo, String payment, Date arrivalDate, Date departureDate, double totalCost, String phoneNo) {
+        this.name = name;
+        this.roomNo = roomNo;
+        this.payment = payment;
+        this.arrivalDate = arrivalDate;
+        this.departureDate = departureDate;
+        this.totalCost = totalCost;
+        this.phoneNo = phoneNo;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
 
     public String getName() {
         return name;
@@ -21,14 +35,6 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public int getRoomNo() {
@@ -39,11 +45,11 @@ public class Customer {
         this.roomNo = roomNo;
     }
 
-    public Payment getPayment() {
+    public String getPayment() {
         return payment;
     }
 
-    public void setPayment(Payment payment) {
+    public void setPayment(String payment) {
         this.payment = payment;
     }
 
@@ -69,10 +75,6 @@ public class Customer {
 
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
-    }
-
-    public String getPhoneNo() {
-        return phoneNo;
     }
 
     public void setPhoneNo(String phoneNo) {
