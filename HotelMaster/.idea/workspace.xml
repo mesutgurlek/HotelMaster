@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/intellij_forms_rt.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/intellij_forms_rt_src.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.jfd" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/CustomerStorage.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/CustomerStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/HotelStorage.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/HotelStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/ReservationStorage.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/ReservationStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$status.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$status.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$types.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$types.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HotelMaster.iml" afterPath="$PROJECT_DIR$/HotelMaster.iml" />
     </list>
     <ignored path="HotelMaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,27 +56,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/HotelStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addRoom#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#addAccount#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#getReservations#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#addReservation#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#deleteReservation#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#getCustomers#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#addCustomer#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#deleteCustomer#0;class#HotelStorage#0" expanded="false" />
-                <element signature="method#getStaffAccounts#0;class#HotelStorage#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HotelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelManagement/HotelController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,21 +103,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/LoginStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#insertAccount#0;class#LoginStorage#0" expanded="false" />
-                <marker date="1448129589585" expanded="true" signature="1269:1308" placeholder="SELECT name,..loginstorage..." />
-                <marker date="1448129589585" expanded="true" signature="3076:3114" placeholder="insert into ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ReservationController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelManagement/ReservationController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.49913645">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -165,22 +140,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginScreen.jfd" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.jfd">
-          <provider selected="true" editor-type-id="JFormDesigner">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginScreen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.java">
+      <file leaf-file-name="HotelMaster.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HotelMaster.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <marker date="1448207495296" expanded="false" signature="391:639" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1448207495296" expanded="false" signature="651:875" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-              </folding>
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -239,7 +204,11 @@
         <option value="$PROJECT_DIR$/src/DatabaseManagement/RoomStorage.java" />
         <option value="$PROJECT_DIR$/src/DatabaseManagement/HotelStorage.java" />
         <option value="$PROJECT_DIR$/src/HotelManagement/HotelController.java" />
+        <option value="$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.java" />
         <option value="$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.jfd" />
+        <option value="$PROJECT_DIR$/src/HotelStaffScreens/LoginScreen.jfd" />
+        <option value="$PROJECT_DIR$/src/HotelStaffScreens/LoginScreen.java" />
+        <option value="$PROJECT_DIR$/src/HotelStaffScreens/Deneme.form" />
       </list>
     </option>
   </component>
@@ -318,64 +287,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelStaffScreen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelEntities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HotelMaster" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatabaseManagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -395,22 +306,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.HotelController">
-    <configuration default="false" name="Caner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Caner" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="HotelMaster" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.LoginScreen (1)">
     <configuration default="false" name="HotelStorage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -459,6 +355,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="HotelManagement.LoginController" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HotelMaster" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginScreen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="HotelStaffScreen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="HotelStaffScreen.LoginScreen" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="HotelMaster" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginScreen (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="HotelStaffScreens.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="HotelStaffScreens.LoginScreen" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -881,18 +817,20 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.Caner" />
-      <item index="1" class="java.lang.String" itemvalue="Application.HotelStorage" />
-      <item index="2" class="java.lang.String" itemvalue="Application.HotelController" />
-      <item index="3" class="java.lang.String" itemvalue="Application.LoginController" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.HotelStorage" />
+      <item index="1" class="java.lang.String" itemvalue="Application.HotelController" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LoginController" />
+      <item index="3" class="java.lang.String" itemvalue="Application.LoginScreen" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LoginScreen (1)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.HotelController" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LoginController" />
-        <item index="2" class="java.lang.String" itemvalue="Application.HotelStorage" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Caner" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.LoginScreen (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LoginScreen" />
+        <item index="2" class="java.lang.String" itemvalue="Application.HotelController" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LoginController" />
+        <item index="4" class="java.lang.String" itemvalue="Application.HotelStorage" />
       </list>
     </recent_temporary>
   </component>
@@ -922,7 +860,7 @@
       <workItem from="1448113785270" duration="7361000" />
       <workItem from="1448178785839" duration="10003000" />
       <workItem from="1448204598239" duration="1929000" />
-      <workItem from="1448206769731" duration="1082000" />
+      <workItem from="1448206769731" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Database Management Branch">
       <created>1447025096335</created>
@@ -966,11 +904,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448207862994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Screens">
+      <created>1448207870111</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1448207870111</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58686000" />
+    <option name="totallyTimeSpent" value="62481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -992,7 +936,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34236187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34236187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1043,20 +987,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/CustomerStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/ReservationStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DatabaseManagement/HotelStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1100,6 +1030,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <element signature="method#deleteCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <marker date="1448193108859" expanded="true" signature="1280:1367" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193108859" expanded="true" signature="1280:1382" placeholder="SELECT name,..customerstorage..." />
+            <marker date="1448193108859" expanded="true" signature="4040:4096" placeholder="insert into ..." />
+            <marker date="1448193108859" expanded="true" signature="5819:5863" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,6 +1059,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getReservations#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#insertReservation#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#ReservationStorage#0" expanded="false" />
+            <marker date="1448193349076" expanded="true" signature="1298:1389" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193349076" expanded="true" signature="3864:3920" placeholder="insert into ..." />
+            <marker date="1448193349076" expanded="true" signature="5600:5647" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1173,6 +1121,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <element signature="method#deleteCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <marker date="1448193108859" expanded="true" signature="1280:1367" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193108859" expanded="true" signature="1280:1382" placeholder="SELECT name,..customerstorage..." />
+            <marker date="1448193108859" expanded="true" signature="4040:4096" placeholder="insert into ..." />
+            <marker date="1448193108859" expanded="true" signature="5819:5863" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1193,6 +1150,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getReservations#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#insertReservation#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#ReservationStorage#0" expanded="false" />
+            <marker date="1448193349076" expanded="true" signature="1298:1389" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193349076" expanded="true" signature="3864:3920" placeholder="insert into ..." />
+            <marker date="1448193349076" expanded="true" signature="5600:5647" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,6 +1212,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <element signature="method#deleteCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <marker date="1448193108859" expanded="true" signature="1280:1367" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193108859" expanded="true" signature="1280:1382" placeholder="SELECT name,..customerstorage..." />
+            <marker date="1448193108859" expanded="true" signature="4040:4096" placeholder="insert into ..." />
+            <marker date="1448193108859" expanded="true" signature="5819:5863" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,6 +1241,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getReservations#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#insertReservation#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#ReservationStorage#0" expanded="false" />
+            <marker date="1448193349076" expanded="true" signature="1298:1389" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193349076" expanded="true" signature="3864:3920" placeholder="insert into ..." />
+            <marker date="1448193349076" expanded="true" signature="5600:5647" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1370,6 +1354,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#230#231#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,6 +1365,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,6 +1376,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,6 +1398,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insertCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <element signature="method#deleteCustomer#0;class#CustomerStorage#0" expanded="false" />
+            <marker date="1448193108859" expanded="true" signature="1280:1367" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193108859" expanded="true" signature="1280:1382" placeholder="SELECT name,..customerstorage..." />
+            <marker date="1448193108859" expanded="true" signature="4040:4096" placeholder="insert into ..." />
+            <marker date="1448193108859" expanded="true" signature="5819:5863" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1412,6 +1414,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getReservations#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#insertReservation#0;class#ReservationStorage#0" expanded="false" />
+            <element signature="method#deleteReservation#0;class#ReservationStorage#0" expanded="false" />
+            <marker date="1448193349076" expanded="true" signature="1298:1389" placeholder="SELECT name,..reservationstorage..." />
+            <marker date="1448193349076" expanded="true" signature="3864:3920" placeholder="insert into ..." />
+            <marker date="1448193349076" expanded="true" signature="5600:5647" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1551,30 +1562,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
+    <entry file="file://$PROJECT_DIR$/HotelMaster.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49913645">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <marker date="1448207495296" expanded="false" signature="391:639" placeholder="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1448207495296" expanded="false" signature="651:875" placeholder="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginScreen.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state />
       </provider>
     </entry>
   </component>
