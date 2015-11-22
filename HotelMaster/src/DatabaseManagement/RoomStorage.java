@@ -1,6 +1,11 @@
 package DatabaseManagement;
 
+import HotelEntities.Room;
+import HotelEntities.RoomStatus;
+import HotelEntities.RoomType;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Heaven on 11/6/2015.
@@ -18,10 +23,40 @@ public class RoomStorage {
     static final String USER = "root";
     static final String PASS = "";
 
-    public void getRooms(){
+    public RoomType typeConverter(String type){
+        if( type.equals("king")){
+            return RoomType.king;
+        }
+        else if( type.equals("family") ){
+            return RoomType.family;
+        }
+        else if( type.equals("regular") ){
+            return RoomType.regular;
+        }
+        else{
+            return null;
+        }
+    }
+    public RoomStatus statusConverter(String stat){
+        if( stat.equals("empty")){
+            return RoomStatus.empty;
+        }
+        else if( stat.equals("full") ){
+            return RoomStatus.full;
+        }
+        else if( stat.equals("reserved") ){
+            return RoomStatus.reserved;
+        }
+        else{
+            return null;
+        }
+    }
+
+    public ArrayList<Room> getRooms(){
         Connection conn = null;
         Statement stmt = null;
         PreparedStatement query = null;
+        ArrayList<Room> rooms = new ArrayList<>();
         try{
             //STEP 2: Register JDBC driver
             Class.forName(JDBC_DRIVER);
@@ -52,6 +87,8 @@ public class RoomStorage {
                 String extraInfo = rs.getString("extraInfo");
 
                 //Display values
+                Room room = new Room(roomNo, floor, typeConverter(type), statusConverter(stat), dailyPrice, childCnt, adultCnt, extraInfo);
+                rooms.add(room);
                 System.out.print("roomNo: " + roomNo);
                 System.out.print(", RoomType: " + type);
                 System.out.print(", status: " + stat);
@@ -82,6 +119,7 @@ public class RoomStorage {
                 se.printStackTrace();
             }//end finally try
         }//end try
+        return rooms;
     }
 
     public void insertRoom(int roomNo, String roomType, String roomStat, int floorNo, int adultCount, int childCount, double dailyPrice, String extraInfo){

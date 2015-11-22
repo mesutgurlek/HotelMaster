@@ -1,6 +1,9 @@
 package DatabaseManagement;
 
+import HotelEntities.Customer;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 /**
  * Created by Heaven on 11/6/2015.
@@ -14,10 +17,11 @@ public class CustomerStorage {
     static final String USER = "root";
     static final String PASS = "";
 
-    public void getCustomers(){
+    public ArrayList<Customer> getCustomers(){
         Connection conn = null;
         Statement stmt = null;
         PreparedStatement query = null;
+        ArrayList<Customer> customers = new ArrayList<>();
         try{
             //STEP 2: Register JDBC driver
             Class.forName(JDBC_DRIVER);
@@ -47,6 +51,8 @@ public class CustomerStorage {
                 double totalCost = rs.getDouble("totalCost");
 
                 //Display values
+                Customer customer = new Customer(name, roomNo, purchaseType,arrivalDate, departureDate, totalCost, phoneNo);
+                customers.add(customer);
                 System.out.print("name: " + name);
                 System.out.print(", phone: " + phoneNo);
                 System.out.print(", purchaseType: " + purchaseType);
@@ -56,6 +62,7 @@ public class CustomerStorage {
                 System.out.println(", totalCost: " + totalCost);
             }
             rs.close();
+            return customers;
         }catch(SQLException se){
             //Handle errors for JDBC
             se.printStackTrace();
@@ -76,6 +83,7 @@ public class CustomerStorage {
                 se.printStackTrace();
             }//end finally try
         }//end try
+        return customers;
     }
 
     public void insertCustomer(String name,  String phoneNo, String purchaseType, int roomNo, Date arrivalDate, Date departureDate, double totalCost){
