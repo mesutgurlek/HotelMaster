@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by Heaven on 11/6/2015.
  */
-public class HotelStorage {
+public class HotelStorageFacade {
     public void addRoom(int roomNo, String roomType, String roomStat, int floorNo, int adultCount, int childCount, double dailyPrice, String extraInfo){
         RoomStorage roomStorage = new RoomStorage();
         roomStorage.insertRoom(roomNo, roomType, roomStat, floorNo, adultCount, childCount, dailyPrice, extraInfo);
@@ -69,6 +69,7 @@ public class HotelStorage {
 
 
 
+/*
     public static void main(String[] args) throws ParseException {
 
        //RoomStorage Example
@@ -78,13 +79,16 @@ public class HotelStorage {
 
         //LoginStorage Example
        // addAccount("ali", "345");
-       /* Hashtable<String, String> table = getStaffAccounts();
+       */
+/* Hashtable<String, String> table = getStaffAccounts();
         if(table.containsKey("mesut")){
             System.out.println("hobaaaaaa");
-        }*/
+        }*//*
+
 
         //ReservationStorage Example
-        /*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        */
+/*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         String dateInString = "22-01-2015";
         String dateInString2 = "14-02-2015";
         java.util.Date date;
@@ -93,12 +97,14 @@ public class HotelStorage {
         date = sdf.parse(dateInString2);
         Date date2 = new Date(date.getTime());
         addReservation("mesut", "05362365485", 102, date1, date2, 1020.5);
-        addReservation("ali", "125487963256", 103, date1, date2, 1111.7);*/
+        addReservation("ali", "125487963256", 103, date1, date2, 1111.7);*//*
+
         //deleteReservation(102);
        // getReservations();
 
         //CustomerStorage Example
-        /*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        */
+/*SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         String dateInString = "22-01-2015";
         String dateInString2 = "14-02-2015";
         java.util.Date date;
@@ -107,11 +113,13 @@ public class HotelStorage {
         date = sdf.parse(dateInString2);
         Date date2 = new Date(date.getTime());
         addCustomer("mesut", "05362365485", "creditCard", 102, date1, date2, 1020.5);
-        addCustomer("ali", "125487963256", "cash", 103, date1, date2, 1111.7);*/
+        addCustomer("ali", "125487963256", "cash", 103, date1, date2, 1111.7);*//*
+
         //deleteCustomer(103);
         //getCustomers();
 
     }
+*/
 
 
 }

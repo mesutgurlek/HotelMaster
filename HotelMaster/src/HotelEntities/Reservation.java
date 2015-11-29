@@ -1,6 +1,9 @@
 package HotelEntities;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 11/21/2015.
@@ -13,6 +16,7 @@ public class Reservation {
     private Date departureDate;
     private String phoneNo;
     private double totalCost;
+    private List<Observer> subscribedViews= new ArrayList<>();
 
     public Reservation(String personName, int reservedRoomNo, Date arrivalDate, Date departureDate, String phoneNo, double totalCost) {
         this.personName = personName;
@@ -21,6 +25,29 @@ public class Reservation {
         this.departureDate = departureDate;
         this.phoneNo = phoneNo;
         this.totalCost = totalCost;
+    }
+
+
+    public void subscribe(Observer observer){
+        subscribedViews.add(observer);
+    }
+
+    public void unsubscribe(Observer observer){
+        subscribedViews.remove(observer);
+    }
+
+    public void notifyObservers(){
+        for(Observer o: subscribedViews){
+            o.notify();
+        }
+    }
+
+    public List<Observer> getSubscribedViews() {
+        return subscribedViews;
+    }
+
+    public void setSubscribedViews(List<Observer> subscribedViews) {
+        this.subscribedViews = subscribedViews;
     }
 
     public String getPersonName() {

@@ -1,6 +1,6 @@
 package HotelEntities;
 
-import HotelManagement.HotelController;
+import HotelManagement.HotelControllerFacade;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by Heaven on 11/21/2015.
  */
 public class Hotel {
-    private HotelController controller;
+    private HotelControllerFacade controller;
     private String name;
     private int numberOfRoom;
     private int numberOfCustomer;
@@ -18,7 +18,7 @@ public class Hotel {
     private ArrayList<Room> availableRooms;
 
     public Hotel(){
-        controller = new HotelController(this);
+        controller = new HotelControllerFacade(this);
     }
 
     public void updateHotelRooms(){

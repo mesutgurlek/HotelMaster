@@ -1,6 +1,6 @@
 package HotelManagement;
 
-import DatabaseManagement.HotelStorage;
+import DatabaseManagement.HotelStorageFacade;
 import HotelEntities.Customer;
 
 import java.util.ArrayList;
@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * Created by Heaven on 11/21/2015.
  */
 public class CustomerController {
-    HotelStorage storage;
+    HotelStorageFacade storage;
 
     public CustomerController() {
-        storage = new HotelStorage();
+        storage = new HotelStorageFacade();
     }
 
     public ArrayList<Customer> getAllCustomers(){

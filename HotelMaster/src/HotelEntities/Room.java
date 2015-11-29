@@ -1,5 +1,9 @@
 package HotelEntities;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observer;
+
 /**
  * Created by Heaven on 11/21/2015.
  */
@@ -12,6 +16,7 @@ public class Room {
     private int childCount;
     private int adultCount;
     private String extraInfo;
+    private List<Observer> subscribedViews= new ArrayList<>();
 
 
     public Room(int roomNo, int floorNo, RoomType type, RoomStatus status, double dailyPrice, int childCount, int adultCount, String extraInfo) {
@@ -25,6 +30,29 @@ public class Room {
         this.adultCount = adultCount;
         this.extraInfo = extraInfo;
     }
+
+    public void subscribe(Observer observer){
+        subscribedViews.add(observer);
+    }
+
+    public void unsubscribe(Observer observer){
+        subscribedViews.remove(observer);
+    }
+
+    public void notifyObservers(){
+        for(Observer o: subscribedViews){
+            o.notify();
+        }
+    }
+
+    public List<Observer> getSubscribedViews() {
+        return subscribedViews;
+    }
+
+    public void setSubscribedViews(List<Observer> subscribedViews) {
+        this.subscribedViews = subscribedViews;
+    }
+
 
     public int getRoomNo() {
         return roomNo;

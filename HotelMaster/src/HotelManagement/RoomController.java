@@ -1,6 +1,6 @@
 package HotelManagement;
 
-import DatabaseManagement.HotelStorage;
+import DatabaseManagement.HotelStorageFacade;
 import HotelEntities.Room;
 import HotelEntities.RoomStatus;
 import HotelEntities.RoomType;
@@ -11,10 +11,10 @@ import java.util.ArrayList;
  * Created by Heaven on 11/21/2015.
  */
 public class RoomController {
-    HotelStorage storage;
+    HotelStorageFacade storage;
 
     public RoomController() {
-        storage = new HotelStorage();
+        storage = new HotelStorageFacade();
     }
 
     public void addRoom(Room room){

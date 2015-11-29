@@ -1,13 +1,18 @@
 package HotelEntities;
 
+import javafx.collections.ObservableList;
+
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 11/21/2015.
  */
-public class Customer {
+public class Customer{
     private String name;
-    private String surname;
     private int roomNo;
     private String payment;
     private Date arrivalDate;
@@ -23,6 +28,30 @@ public class Customer {
         this.departureDate = departureDate;
         this.totalCost = totalCost;
         this.phoneNo = phoneNo;
+    }
+    private List<Observer> subscribedViews= new ArrayList<>();
+
+
+    public void subscribe(Observer observer){
+        subscribedViews.add(observer);
+    }
+
+    public void unsubscribe(Observer observer){
+        subscribedViews.remove(observer);
+    }
+
+    public void notifyObservers(){
+        for(Observer o: subscribedViews){
+            o.notify();
+        }
+    }
+
+    public List<Observer> getSubscribedViews() {
+        return subscribedViews;
+    }
+
+    public void setSubscribedViews(List<Observer> subscribedViews) {
+        this.subscribedViews = subscribedViews;
     }
 
     public String getPhoneNo() {

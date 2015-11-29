@@ -10,14 +10,14 @@ import java.util.ArrayList;
 /**
  * Created by Heaven on 11/21/2015.
  */
-public class HotelController {
+public class HotelControllerFacade {
     public Hotel myHotel;
     static LoginController loginController = new LoginController();
     static RoomController roomController = new RoomController();
     static CustomerController customerController = new CustomerController();
     static ReservationController reservationController = new ReservationController();
 
-    public HotelController(Hotel myHotel){
+    public HotelControllerFacade(Hotel myHotel){
         this.myHotel = myHotel;
         loginController = new LoginController();
         roomController = new RoomController();

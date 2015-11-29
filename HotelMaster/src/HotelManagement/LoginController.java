@@ -1,6 +1,6 @@
 package HotelManagement;
 
-import DatabaseManagement.HotelStorage;
+import DatabaseManagement.HotelStorageFacade;
 import HotelEntities.HotelStaff;
 
 import java.util.Hashtable;
@@ -9,11 +9,11 @@ import java.util.Hashtable;
  * Created by Heaven on 11/21/2015.
  */
 public class LoginController {
-    private HotelStorage storage;
+    private HotelStorageFacade storage;
     private HotelStaff staff;
 
     public LoginController(){
-        storage = new HotelStorage();
+        storage = new HotelStorageFacade();
     }
 
     public boolean checkAuth(String username, String password){

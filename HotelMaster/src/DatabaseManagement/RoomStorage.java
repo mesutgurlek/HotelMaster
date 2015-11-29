@@ -11,10 +11,6 @@ import java.util.ArrayList;
  * Created by Heaven on 11/6/2015.
  */
 public class RoomStorage {
-    //Enumeration for room types and Room Status
-    public enum types{regular, family, king};
-    public enum status{full, empty, reserved};
-
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:mysql://localhost/hotelmaster";
