@@ -1,6 +1,7 @@
 package HotelEntities;
 
 import HotelManagement.HotelControllerFacade;
+import HotelStaffScreen.LoginView;
 
 import java.util.ArrayList;
 
@@ -16,8 +17,11 @@ public class Hotel {
     private ArrayList<Customer> allCustomers;
     private ArrayList<Reservation> allReservations;
     private ArrayList<Room> availableRooms;
+    private LoginView loginView;
+
 
     public Hotel(){
+        this.loginView = new LoginView();
         controller = new HotelControllerFacade(this);
     }
 
@@ -35,6 +39,13 @@ public class Hotel {
     public void updateHotelReservations(){
         this.allReservations = controller.getAllReservations();
         //Add updateView
+    }
+    public LoginView getLoginView() {
+        return loginView;
+    }
+
+    public void setLoginView(LoginView loginView) {
+        this.loginView = loginView;
     }
 
     public ArrayList<Room> getAvailableRooms(){ return availableRooms; }

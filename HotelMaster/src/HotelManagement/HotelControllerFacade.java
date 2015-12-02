@@ -1,6 +1,7 @@
 package HotelManagement;
 
 import HotelEntities.*;
+import HotelStaffScreen.LoginView;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -12,14 +13,17 @@ import java.util.ArrayList;
  */
 public class HotelControllerFacade {
     public Hotel myHotel;
-    static LoginController loginController = new LoginController();
-    static RoomController roomController = new RoomController();
-    static CustomerController customerController = new CustomerController();
-    static ReservationController reservationController = new ReservationController();
+    private LoginView loginView;
+    private LoginController loginController;
+    private RoomController roomController = new RoomController();
+    private CustomerController customerController = new CustomerController();
+    private ReservationController reservationController = new ReservationController();
 
     public HotelControllerFacade(Hotel myHotel){
         this.myHotel = myHotel;
-        loginController = new LoginController();
+        this.loginView = myHotel.getLoginView();
+
+        loginController = new LoginController(loginView);
         roomController = new RoomController();
         customerController = new CustomerController();
         reservationController = new ReservationController();

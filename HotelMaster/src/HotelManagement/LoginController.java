@@ -2,6 +2,8 @@ package HotelManagement;
 
 import DatabaseManagement.HotelStorageFacade;
 import HotelEntities.HotelStaff;
+import HotelStaffScreen.LoginView;
+import HotelStaffScreen.Main;
 
 import java.util.Hashtable;
 
@@ -11,9 +13,23 @@ import java.util.Hashtable;
 public class LoginController {
     private HotelStorageFacade storage;
     private HotelStaff staff;
+    private LoginView loginView;
 
-    public LoginController(){
+    public LoginController(LoginView loginView){
         storage = new HotelStorageFacade();
+
+        this.loginView = loginView;
+
+        loginView.getLoginButton().setOnAction(e ->{
+            String username = loginView.getUsernameTextField().getText();
+            String password = loginView.getPasswordField().getText();
+            if(this.checkAuth(username, password)) {
+                System.out.println("Successfull!!!!!!");
+                //    CheckInView checkInView = new CheckInView();
+                //    CheckInController checkInController = new CheckInController(checkInView);
+                //    Main.changeSceneRoot(checkInView);
+            }
+        });
     }
 
     public boolean checkAuth(String username, String password){
