@@ -4,11 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="Deaign Patterns are applied">
+    <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/Main.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/HotelStorage.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage$types.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/DatabaseManagement/RoomStorage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" afterPath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" afterPath="$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" afterPath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" />
     </list>
     <ignored path="HotelMaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -92,16 +95,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HotelEntities/Payment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HotelStaff.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelEntities/HotelStaff.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4424581">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,6 +141,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HotelManagement/RoomController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HotelManagement/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -158,11 +161,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.63910615">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -952,7 +955,7 @@
       <workItem from="1448726964109" duration="7928000" />
       <workItem from="1448789516809" duration="757000" />
       <workItem from="1448895373669" duration="845000" />
-      <workItem from="1449081206269" duration="1650000" />
+      <workItem from="1449081206269" duration="1764000" />
     </task>
     <task id="LOCAL-00001" summary="Database Management Branch">
       <created>1447025096335</created>
@@ -1032,11 +1035,17 @@
       <option name="project" value="LOCAL" />
       <updated>1448789768014</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Started to screens">
+      <created>1449082888903</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1449082888903</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77068000" />
+    <option name="totallyTimeSpent" value="77182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1098,7 +1107,8 @@
     <MESSAGE value="Screens" />
     <MESSAGE value="Screens v01" />
     <MESSAGE value="Deaign Patterns are applied" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deaign Patterns are applied" />
+    <MESSAGE value="Started to screens" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started to screens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1404,13 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelManagement/RoomController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelManagement/CustomerController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1501,13 +1504,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java">
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HotelManagement/RoomController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,18 +1540,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelManagement/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HotelEntities/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4424581">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.63910615">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
