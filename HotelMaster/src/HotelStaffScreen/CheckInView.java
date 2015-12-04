@@ -2,7 +2,9 @@ package HotelStaffScreen;
 
 import HotelEntities.Hotel;
 import HotelEntities.Room;
+import HotelEntities.RoomStatus;
 import HotelEntities.RoomType;
+import HotelManagement.RoomController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.CheckBox;
@@ -19,9 +21,10 @@ import javafx.util.Callback;
 public class CheckInView extends Pane {
     private ObservableList<Room> data;
 
+
     public CheckInView(){
-        Hotel hotel = new Hotel();
-        this.data = FXCollections.observableArrayList(hotel.getAvailableRooms());
+        RoomController controller = new RoomController();
+        data = FXCollections.observableArrayList(controller.getAvailableRooms());
 
         TableColumn roomNo = new TableColumn("Room No");
         roomNo.setMinWidth(100);
@@ -33,10 +36,35 @@ public class CheckInView extends Pane {
         floorNo.setCellValueFactory(
                 new PropertyValueFactory<Room, Integer>("floorNo"));
 
-        TableColumn roomType = new TableColumn("Age");
+        TableColumn roomType = new TableColumn("Room Type");
         roomType.setMinWidth(100);
         roomType.setCellValueFactory(
                 new PropertyValueFactory<Room, RoomType>("type"));
+
+        TableColumn roomStatus = new TableColumn("Room Status");
+        roomStatus.setMinWidth(100);
+        roomStatus.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("status"));
+
+        TableColumn dailyPrice = new TableColumn("Daily Price");
+        dailyPrice.setMinWidth(100);
+        dailyPrice.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("dailyPrice"));
+
+        TableColumn childCount = new TableColumn("Child Count");
+        childCount.setMinWidth(100);
+        childCount.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("childCount"));
+
+        TableColumn adultCount = new TableColumn("Adult Count");
+        adultCount.setMinWidth(100);
+        adultCount.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("adultCount"));
+
+        TableColumn extraInfo = new TableColumn("Extra Info");
+        extraInfo.setMinWidth(150);
+        extraInfo.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("extraInfo"));
 
         //"Checkbox" column
         TableColumn delCol = new TableColumn<Room, Boolean>();
@@ -49,20 +77,11 @@ public class CheckInView extends Pane {
             }
         });
         TableView table = new TableView();
-        table.setItems(getData());
-        table.setLayoutX(250);
-        table.setLayoutY(100);
+        table.setItems(data);
+        table.setLayoutX(0);
+        table.setLayoutY(350);
         table.setEditable(true);
-        table.getColumns().addAll(roomNo, floorNo, roomType, delCol);
+        table.getColumns().addAll(roomNo, floorNo, roomType, roomStatus, dailyPrice, childCount, adultCount,extraInfo, delCol);
         getChildren().add(table);
     }
-    public ObservableList<Room> getData() {
-        return data;
-    }
-
-    public void setData(ObservableList<Room> data) {
-        this.data = data;
-    }
-
-
 }

@@ -77,16 +77,7 @@ public class HotelControllerFacade {
     }
 
     public ArrayList<Room> getAvailableRooms(){
-        ArrayList<Room> allRooms = roomController.getAllRooms();
-        ArrayList<Room> availableRooms = new ArrayList<>();
-
-        for( int i = 0; i < allRooms.size(); i++){
-            if(allRooms.get(i).getStatus().equals("empty")){
-                availableRooms.add(allRooms.get(i));
-            }
-        }
-
-        return availableRooms;
+        return roomController.getAvailableRooms();
     }
 
     public ArrayList<Customer> getAllCustomers(){

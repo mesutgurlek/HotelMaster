@@ -137,4 +137,16 @@ public class Room {
     public int getAdultCount() {
         return adultCount;
     }
+
+    public boolean getCheckbox() {
+        return checkbox.get();
+    }
+
+    public BooleanProperty checkboxProperty() {
+        return checkbox;
+    }
+
+    public void setCheckbox(boolean checkbox) {
+        this.checkbox.set(checkbox);
+    }
 }

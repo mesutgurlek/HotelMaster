@@ -13,7 +13,6 @@ import java.util.ArrayList;
 public class RoomController {
     HotelStorageFacade storage;
 
-
     public RoomController() {
         storage = new HotelStorageFacade();
     }
@@ -28,6 +27,19 @@ public class RoomController {
 
     public ArrayList<Room> getAllRooms(){
        return storage.getRooms();
+    }
+
+    public ArrayList<Room> getAvailableRooms(){
+        ArrayList<Room> allRooms = storage.getRooms();
+        ArrayList<Room> availableRooms = new ArrayList<>();
+
+        for( int i = 0; i < allRooms.size(); i++){
+            if(statusConverter(allRooms.get(i).getStatus()).equals("empty")){
+                availableRooms.add(allRooms.get(i));
+            }
+        }
+
+        return availableRooms;
     }
 
     public String typeConverter(RoomType type){

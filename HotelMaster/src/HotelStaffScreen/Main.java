@@ -27,7 +27,7 @@ public class Main extends Application {
         this.hotel = new Hotel();
         this.hotelController = new HotelControllerFacade(hotel);
 
-        scene = new Scene(hotel.getLoginView(), 960, 540);
+        scene = new Scene(hotel.getLoginView(), 900, 540);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("HotelMaster");
@@ -35,14 +35,6 @@ public class Main extends Application {
         primaryStage.centerOnScreen();
         primaryStage.show();
 
-    }
-
-    public Hotel getHotel() {
-        return hotel;
-    }
-
-    public void setHotel(Hotel hotel) {
-        this.hotel = hotel;
     }
 
     public static void changeSceneRoot(Parent parent) {
