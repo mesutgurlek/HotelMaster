@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class RoomController {
     HotelStorageFacade storage;
 
+
     public RoomController() {
         storage = new HotelStorageFacade();
     }

@@ -1,9 +1,11 @@
 package HotelManagement;
 
 import DatabaseManagement.HotelStorageFacade;
+import HotelEntities.Hotel;
 import HotelEntities.HotelStaff;
 import HotelStaffScreen.LoginView;
 import HotelStaffScreen.Main;
+import HotelStaffScreen.MenuView;
 
 import java.util.Hashtable;
 
@@ -25,9 +27,11 @@ public class LoginController {
             String password = loginView.getPasswordField().getText();
             if(this.checkAuth(username, password)) {
                 System.out.println("Successfull!!!!!!");
-                //    CheckInView checkInView = new CheckInView();
-                //    CheckInController checkInController = new CheckInController(checkInView);
-                //    Main.changeSceneRoot(checkInView);
+                /*MenuView menuView = new MenuView();
+                MenuController menuController = new MenuController(menuView);
+                Main.changeSceneRoot(menuView);*/
+                Hotel hotel = new Hotel();
+                Main.changeSceneRoot(hotel.getMenuView());
             }
         });
     }
@@ -35,7 +39,7 @@ public class LoginController {
     public boolean checkAuth(String username, String password){
         staff = new HotelStaff(username, password);
         Hashtable<String, String> accounts = storage.getStaffAccounts();
-        if( accounts.containsKey(username) && accounts.get(username).equals(password)){
+        if( accounts.containsKey(staff.getUsername()) && accounts.get(staff.getUsername()).equals(staff.getPassword())){
             System.out.println("Authorized = " + username);
             return true;
         }

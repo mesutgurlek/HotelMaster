@@ -1,5 +1,10 @@
 package HotelEntities;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observer;
@@ -18,6 +23,10 @@ public class Room {
     private String extraInfo;
     private List<Observer> subscribedViews= new ArrayList<>();
 
+    //Updated items
+    private BooleanProperty checkbox;
+    private Boolean isSelected;
+
 
     public Room(int roomNo, int floorNo, RoomType type, RoomStatus status, double dailyPrice, int childCount, int adultCount, String extraInfo) {
         this.roomNo = roomNo;
@@ -26,11 +35,21 @@ public class Room {
         this.status = status;
         this.dailyPrice = dailyPrice;
         this.childCount = childCount;
-
         this.adultCount = adultCount;
         this.extraInfo = extraInfo;
-    }
+        this.isSelected = false;
 
+        //Handles with choosing room
+        this.checkbox = new SimpleBooleanProperty(false);
+        this.checkbox.addListener(new ChangeListener<Boolean>() {
+
+            public void changed(ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) {
+                isSelected = t1;
+                System.out.println(getRoomNo() + " selected: " + isSelected);
+            }
+        });
+    }
+///////////////////////
     public void subscribe(Observer observer){
         subscribedViews.add(observer);
     }
@@ -52,7 +71,7 @@ public class Room {
     public void setSubscribedViews(List<Observer> subscribedViews) {
         this.subscribedViews = subscribedViews;
     }
-
+//////////////////////////////////////////
 
     public int getRoomNo() {
         return roomNo;

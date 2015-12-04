@@ -2,6 +2,7 @@ package HotelManagement;
 
 import HotelEntities.*;
 import HotelStaffScreen.LoginView;
+import HotelStaffScreen.MenuView;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -14,15 +15,19 @@ import java.util.ArrayList;
 public class HotelControllerFacade {
     public Hotel myHotel;
     private LoginView loginView;
+    private MenuView menuView;
     private LoginController loginController;
+    private MenuController menuController;
     private RoomController roomController = new RoomController();
     private CustomerController customerController = new CustomerController();
     private ReservationController reservationController = new ReservationController();
 
-    public HotelControllerFacade(Hotel myHotel){
-        this.myHotel = myHotel;
+    public HotelControllerFacade(Hotel hotel){
+        this.myHotel = hotel;
         this.loginView = myHotel.getLoginView();
+        this.menuView = myHotel.getMenuView();
 
+        menuController = new MenuController(menuView);
         loginController = new LoginController(loginView);
         roomController = new RoomController();
         customerController = new CustomerController();
@@ -53,6 +58,14 @@ public class HotelControllerFacade {
        // Customer customer = new Customer("Jason", "pitt", 502, "cash", date1, date2, 4026, "236547895123");
         //customerController.addCustomer(customer);
         //customerController.deleteCustomer(502);
+    }
+
+    public Hotel getMyHotel() {
+        return myHotel;
+    }
+
+    public void setMyHotel(Hotel myHotel) {
+        this.myHotel = myHotel;
     }
 
     public ArrayList<Reservation> getAllReservations(){
