@@ -4,19 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="Started to screens v01">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelManagement/MenuController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/CheckBoxTableCell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/CheckInView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/MenuView.java" />
+    <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" afterPath="$PROJECT_DIR$/src/HotelEntities/Hotel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelEntities/Room.java" afterPath="$PROJECT_DIR$/src/HotelEntities/Room.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" afterPath="$PROJECT_DIR$/src/HotelManagement/HotelControllerFacade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" afterPath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/RoomController.java" afterPath="$PROJECT_DIR$/src/HotelManagement/RoomController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/Main.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/Main.java" />
     </list>
     <ignored path="HotelMaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -978,7 +967,7 @@
       <workItem from="1448789516809" duration="757000" />
       <workItem from="1448895373669" duration="845000" />
       <workItem from="1449081206269" duration="2127000" />
-      <workItem from="1449252207404" duration="7747000" />
+      <workItem from="1449252207404" duration="7770000" />
     </task>
     <task id="LOCAL-00001" summary="Database Management Branch">
       <created>1447025096335</created>
@@ -1070,11 +1059,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449082994583</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Checkin View">
+      <created>1449260051619</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1449260051619</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85292000" />
+    <option name="totallyTimeSpent" value="85315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,7 +1133,8 @@
     <MESSAGE value="Deaign Patterns are applied" />
     <MESSAGE value="Started to screens" />
     <MESSAGE value="Started to screens v01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started to screens v01" />
+    <MESSAGE value="Checkin View" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkin View" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
