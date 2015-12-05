@@ -67,6 +67,11 @@ public class HotelStorageFacade {
         return storage.getAccounts();
     }
 
+    public void updateRoom(int roomNo, String status){
+        RoomStorage storage = new RoomStorage();
+        storage.updateRoom(roomNo, status);
+    }
+
 
 
 /*

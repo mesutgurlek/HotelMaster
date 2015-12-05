@@ -18,8 +18,12 @@ public class MenuView extends Pane {
         checkInLogo.setLayoutX(100);
         checkInLogo.setLayoutY(100);
 
+        customerListLogo = new ImageView(getClass().getResource("icons/customerListIcon.png").toExternalForm());
+        customerListLogo.setLayoutX(300);
+        customerListLogo.setLayoutY(100);
 
-        getChildren().addAll(checkInLogo);
+
+        getChildren().addAll(checkInLogo, customerListLogo);
     }
 
     public ImageView getCheckInLogo() {

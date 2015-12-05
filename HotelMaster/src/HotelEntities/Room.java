@@ -45,7 +45,6 @@ public class Room {
 
             public void changed(ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) {
                 isSelected = t1;
-                System.out.println(getRoomNo() + " selected: " + isSelected);
             }
         });
     }

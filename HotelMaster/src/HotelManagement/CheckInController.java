@@ -93,9 +93,8 @@ public class CheckInController {
             Customer customer = new Customer(name, roomNo, paymentMethod, arrivalDate, departureDate, totalcost, phoneNo);
             customerController.addCustomer(customer);
 
-            roomController.deleteRoom(roomNo);
-            selectedRoom.setStatus(RoomStatus.full);
-            roomController.addRoom(selectedRoom);
+            roomController.updateRoom(roomNo, "full");
+
 
             Hotel hotel = new Hotel();
             Main.changeSceneRoot(hotel.getCheckInView());

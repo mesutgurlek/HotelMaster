@@ -26,5 +26,13 @@ public class MenuController {
                 Main.changeSceneRoot(checkInView);*/
             }
         });
+
+        menuView.getCustomerListLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Hotel hotel = new Hotel();
+                Main.changeSceneRoot(hotel.getCustomerListView());
+            }
+        });
     }
 }

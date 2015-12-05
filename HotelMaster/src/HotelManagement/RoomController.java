@@ -25,6 +25,10 @@ public class RoomController {
         storage.deleteRoom(roomNo);
     }
 
+    public void updateRoom(int roomNo, String status){
+        storage.updateRoom(roomNo, status);
+    }
+
     public ArrayList<Room> getAllRooms(){
        return storage.getRooms();
     }
