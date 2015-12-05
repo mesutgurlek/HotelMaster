@@ -1,6 +1,7 @@
 package HotelManagement;
 
 import HotelEntities.*;
+import HotelStaffScreen.CheckInView;
 import HotelStaffScreen.LoginView;
 import HotelStaffScreen.MenuView;
 
@@ -16,8 +17,10 @@ public class HotelControllerFacade {
     public Hotel myHotel;
     private LoginView loginView;
     private MenuView menuView;
+    private CheckInView checkInView;
     private LoginController loginController;
     private MenuController menuController;
+    private CheckInController checkInController;
     private RoomController roomController = new RoomController();
     private CustomerController customerController = new CustomerController();
     private ReservationController reservationController = new ReservationController();
@@ -26,7 +29,9 @@ public class HotelControllerFacade {
         this.myHotel = hotel;
         this.loginView = myHotel.getLoginView();
         this.menuView = myHotel.getMenuView();
+        this.checkInView = myHotel.getCheckInView();
 
+        checkInController = new CheckInController(checkInView);
         menuController = new MenuController(menuView);
         loginController = new LoginController(loginView);
         roomController = new RoomController();

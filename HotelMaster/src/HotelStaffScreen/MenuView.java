@@ -15,8 +15,8 @@ public class MenuView extends Pane {
 
     public MenuView() {
         checkInLogo = new ImageView(getClass().getResource("icons/checkin_menu.png").toExternalForm());
-        checkInLogo.setLayoutX(150);
-        checkInLogo.setLayoutY(200);
+        checkInLogo.setLayoutX(100);
+        checkInLogo.setLayoutY(100);
 
 
         getChildren().addAll(checkInLogo);
