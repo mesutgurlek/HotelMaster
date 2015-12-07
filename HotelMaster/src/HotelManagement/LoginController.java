@@ -27,11 +27,10 @@ public class LoginController {
             String password = loginView.getPasswordField().getText();
             if(this.checkAuth(username, password)) {
                 System.out.println("Successfull!!!!!!");
-                /*MenuView menuView = new MenuView();
+                MenuView menuView = new MenuView(Main.hotel);
                 MenuController menuController = new MenuController(menuView);
-                Main.changeSceneRoot(menuView);*/
-                Hotel hotel = new Hotel();
-                Main.changeSceneRoot(hotel.getMenuView());
+                Main.changeSceneRoot(menuView);
+                Main.hotel.unsubscribe(this.loginView);
             }
         });
     }

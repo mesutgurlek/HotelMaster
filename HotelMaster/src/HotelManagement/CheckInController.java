@@ -6,6 +6,7 @@ import HotelEntities.Room;
 import HotelEntities.RoomStatus;
 import HotelStaffScreen.CheckInView;
 import HotelStaffScreen.Main;
+import HotelStaffScreen.MenuView;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -16,6 +17,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 12/4/2015.
@@ -33,8 +35,10 @@ public class CheckInController {
         this.roomController = new RoomController();
 
         checkInView.getBackButton().setOnAction(e -> {
-                Hotel hotel = new Hotel();
-                Main.changeSceneRoot(hotel.getMenuView());
+            MenuView menuView = new MenuView(Main.hotel);
+            MenuController menuController = new MenuController(menuView);
+            Main.changeSceneRoot(menuView);
+            Main.hotel.unsubscribe(this.checkInView);
         });
 
         checkInView.getCalculateCostButton().setOnAction(e->{
@@ -95,9 +99,11 @@ public class CheckInController {
 
             roomController.updateRoom(roomNo, "full");
 
+            for(Observer o : Main.hotel.getObservers()){
+                System.out.println("observer" + o.toString());
+            }
+            Main.hotel.notifyObservers();
 
-            Hotel hotel = new Hotel();
-            Main.changeSceneRoot(hotel.getCheckInView());
         });
     }
 }

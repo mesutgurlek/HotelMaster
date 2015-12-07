@@ -1,10 +1,9 @@
 package HotelManagement;
 
 import HotelEntities.Hotel;
-import HotelStaffScreen.CheckInView;
-import HotelStaffScreen.Main;
-import HotelStaffScreen.MenuView;
+import HotelStaffScreen.*;
 import javafx.event.EventHandler;
+import javafx.scene.control.Menu;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -16,30 +15,35 @@ public class MenuController {
     public MenuController(MenuView menuView) {
         this.menuView = menuView;
 
-        menuView.getCheckInLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
+        this.menuView.getCheckInLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Hotel hotel = new Hotel();
-                Main.changeSceneRoot(hotel.getCheckInView());
-                /*CheckInView checkInView= new CheckInView();
-                RoomController roomController= new RoomController(checkInView);
-                Main.changeSceneRoot(checkInView);*/
+                /*Hotel hotel = new Hotel();
+                Main.changeSceneRoot(hotel.getCheckInView());*/
+                CheckInView checkInView= new CheckInView(Main.hotel);
+                CheckInController checkInViewController= new CheckInController(checkInView);
+                Main.changeSceneRoot(checkInView);
+                Main.hotel.unsubscribe(menuView);
             }
         });
 
-        menuView.getCustomerListLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
+        this.menuView.getCustomerListLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Hotel hotel = new Hotel();
-                Main.changeSceneRoot(hotel.getCustomerListView());
+                CustomerListView customerListView = new CustomerListView(Main.hotel);
+                CustomerListController customerListController = new CustomerListController(customerListView);
+                Main.changeSceneRoot(customerListView);
+                Main.hotel.unsubscribe(menuView);
             }
         });
 
-        menuView.getRoomEditorLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
+        this.menuView.getRoomEditorLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                Hotel hotel = new Hotel();
-                Main.changeSceneRoot(hotel.getRoomEditorView());
+                RoomEditorView roomEditorView = new RoomEditorView(Main.hotel);
+                RoomEditorController roomEditorController = new RoomEditorController(roomEditorView);
+                Main.changeSceneRoot(roomEditorView);
+                Main.hotel.unsubscribe(menuView);
             }
         });
     }

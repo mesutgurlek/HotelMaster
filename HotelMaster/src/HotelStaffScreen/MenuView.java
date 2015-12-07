@@ -1,19 +1,27 @@
 package HotelStaffScreen;
 
+import HotelEntities.Hotel;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 12/4/2015.
  */
-public class MenuView extends Pane {
+public class MenuView extends Pane implements Observer{
     private ImageView checkInLogo;
     private ImageView customerListLogo;
     private ImageView roomListLogo;
     private ImageView reservationsLogo;
     private ImageView roomEditorLogo;
+    private Hotel hotel;
 
-    public MenuView() {
+    public MenuView(Hotel hotel) {
+        this.hotel = hotel;
+        hotel.subscribe(this);
+
         checkInLogo = new ImageView(getClass().getResource("icons/checkin_menu.png").toExternalForm());
         checkInLogo.setLayoutX(100);
         checkInLogo.setLayoutY(100);
@@ -67,5 +75,10 @@ public class MenuView extends Pane {
 
     public void setRoomEditorLogo(ImageView roomEditorLogo) {
         this.roomEditorLogo = roomEditorLogo;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }

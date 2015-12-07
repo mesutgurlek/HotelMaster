@@ -1,5 +1,6 @@
 package HotelStaffScreen;
 
+import HotelEntities.Hotel;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -8,18 +9,25 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Created by Heaven on 12/2/2015.
  */
-public class LoginView extends Pane {
+public class LoginView extends Pane implements Observer {
     private TextField usernameTextField;
     private PasswordField passwordField;
     private Button loginButton;
     private Label usernameText;
     private Label passwordText;
     private ImageView logo;
+    private Hotel hotel;
 
-    public LoginView() {
+    public LoginView(Hotel hotel) {
+        this.hotel = hotel;
+        hotel.subscribe(this);
+
         logo = new ImageView(getClass().getResource("icons/logo.png").toExternalForm());
         logo.setLayoutX(180);
         logo.setLayoutY(30);
@@ -72,5 +80,10 @@ public class LoginView extends Pane {
 
     public void setLoginButton(Button loginButton) {
         this.loginButton = loginButton;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+
     }
 }

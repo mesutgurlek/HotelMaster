@@ -1,13 +1,17 @@
 package HotelStaffScreen;
 
+import HotelEntities.Hotel;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Created by Heaven on 12/7/2015.
  */
-public class RoomEditorView extends Pane {
+public class RoomEditorView extends Pane implements Observer{
     private Button backButton;
     private Button confirmButton;
     final ComboBox roomTypeBox;
@@ -16,8 +20,12 @@ public class RoomEditorView extends Pane {
     private Label roomNolabel, floorNoLabel,dailyPriceLabel,adultCountLabel, childCountLabel, extraInfoLabel;
     private TextField roomNoField, floorNoField, dailyPriceField, adultCountField, childCountField;
     private TextArea extraInfoField;
+    private Hotel hotel;
 
-    public RoomEditorView(){
+    public RoomEditorView(Hotel hotel){
+        this.hotel = hotel;
+        hotel.subscribe(this);
+
         backButton = new Button("Back");
         backButton.setLayoutX(700);
         backButton.setLayoutY(25);
@@ -171,4 +179,16 @@ public class RoomEditorView extends Pane {
         this.adultCountField = adultCountField;
     }
 
+    @Override
+    public void update(Observable o, Object arg) {
+        hotel.updateHotelRooms();
+        getChildren().removeAll(extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
+        extraInfoField.setText("");
+        roomNoField.setText("");
+        floorNoField.setText("");
+        dailyPriceField.setText("");
+        adultCountField.setText("");
+        childCountField.setText("");
+        getChildren().addAll(extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
+    }
 }

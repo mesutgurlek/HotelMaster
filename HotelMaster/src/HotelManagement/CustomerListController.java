@@ -4,9 +4,11 @@ import HotelEntities.Customer;
 import HotelEntities.Hotel;
 import HotelStaffScreen.CustomerListView;
 import HotelStaffScreen.Main;
+import HotelStaffScreen.MenuView;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 12/5/2015.
@@ -18,8 +20,10 @@ public class CustomerListController {
         this.customerListView = customerListView;
 
         customerListView.getBackButton().setOnAction(e -> {
-            Hotel hotel = new Hotel();
-            Main.changeSceneRoot(hotel.getMenuView());
+            MenuView menuView = new MenuView(Main.hotel);
+            MenuController menuController = new MenuController(menuView);
+            Main.changeSceneRoot(menuView);
+            Main.hotel.unsubscribe(this.customerListView);
         });
 
         customerListView.getProcessButton().setOnAction(e->{
@@ -38,8 +42,10 @@ public class CustomerListController {
                 roomController.updateRoom(c.getRoomNo(), "empty");
             }
 
-            Hotel hotel = new Hotel();
-            Main.changeSceneRoot(hotel.getCustomerListView());
+            for(Observer o : Main.hotel.getObservers()){
+                System.out.println("observer" + o.toString());
+            }
+            Main.hotel.notifyObservers();
         });
     }
 

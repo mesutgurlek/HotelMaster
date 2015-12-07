@@ -5,6 +5,7 @@ import HotelEntities.Room;
 import HotelEntities.RoomStatus;
 import HotelEntities.RoomType;
 import HotelStaffScreen.Main;
+import HotelStaffScreen.MenuView;
 import HotelStaffScreen.RoomEditorView;
 
 /**
@@ -17,8 +18,12 @@ public class RoomEditorController {
         this.roomEditorView = roomEditorView;
 
         roomEditorView.getBackButton().setOnAction(e -> {
-            Hotel hotel = new Hotel();
-            Main.changeSceneRoot(hotel.getMenuView());
+            /*Hotel hotel = new Hotel();
+            Main.changeSceneRoot(hotel.getMenuView());*/
+            MenuView menuView = new MenuView(Main.hotel);
+            MenuController menuController = new MenuController(menuView);
+            Main.changeSceneRoot(menuView);
+            Main.hotel.unsubscribe(this.roomEditorView);
         });
 
         roomEditorView.getConfirmButton().setOnAction(e->{
@@ -33,6 +38,8 @@ public class RoomEditorController {
             Room room = new Room(roomNo, floorNo, roomType, RoomStatus.empty, dailyPrice, childCount, adultCount, extraInfo);
             RoomController roomController = new RoomController();
             roomController.addRoom(room);
+
+            Main.hotel.notifyObservers();
         });
     }
 

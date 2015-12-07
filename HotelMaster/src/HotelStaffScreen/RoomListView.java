@@ -1,10 +1,9 @@
 package HotelStaffScreen;
 
 import HotelEntities.Customer;
-import HotelEntities.Hotel;
 import HotelEntities.Room;
-import HotelEntities.RoomType;
 import HotelManagement.CustomerController;
+import HotelManagement.RoomController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
@@ -17,25 +16,18 @@ import javafx.scene.shape.Line;
 import javafx.util.Callback;
 
 import java.sql.Date;
-import java.util.Observable;
-import java.util.Observer;
 
 /**
- * Created by Heaven on 12/5/2015.
+ * Created by Heaven on 12/7/2015.
  */
-public class CustomerListView extends Pane implements Observer{
-    private ObservableList<Customer> data;
+public class RoomListView extends Pane {
+    private ObservableList<Room> data;
     private Line separator1;
     private Button backButton, processButton;
-    private Hotel hotel;
-    private TableView table;
 
-    public CustomerListView(Hotel hotel){
-        this.hotel = hotel;
-        hotel.subscribe(this);
-
-        hotel.updateHotelCustomers();
-        data = FXCollections.observableArrayList(hotel.getCustomers());
+    public RoomListView(){
+        RoomController controller = new RoomController();
+        data = FXCollections.observableArrayList(controller.getAllRooms());
 
         backButton = new Button("Back");
         backButton.setLayoutX(700);
@@ -94,49 +86,13 @@ public class CustomerListView extends Pane implements Observer{
                 return new CheckBoxTableCell<Customer, Boolean>();
             }
         });
-        table = new TableView();
+        TableView table = new TableView();
         table.setItems(data);
         table.setLayoutX(0);
         table.setLayoutY(83);
         table.setEditable(true);
         table.getColumns().addAll(name, roomNo, arrivalDate, departureDate,phoneNo, totalCost, payment, delCol);
 
-        getChildren().addAll(backButton, processButton, separator1, table);
-    }
-
-
-    public Button getBackButton() {
-        return backButton;
-    }
-
-    public void setBackButton(Button backButton) {
-        this.backButton = backButton;
-    }
-
-    public Button getProcessButton() {
-        return processButton;
-    }
-
-    public void setProcessButton(Button processButton) {
-        this.processButton = processButton;
-    }
-
-    public ObservableList<Customer> getData() {
-        return data;
-    }
-
-    public void setData(ObservableList<Customer> data) {
-        this.data = data;
-    }
-
-    @Override
-    public void update(Observable o, Object arg) {
-        hotel.updateHotelRooms();
-        hotel.updateHotelCustomers();
-        hotel.updateHotelReservations();
-        data = FXCollections.observableArrayList(hotel.getCustomers());
-        getChildren().removeAll(backButton, processButton, separator1, table);
-        table.setItems(data);
         getChildren().addAll(backButton, processButton, separator1, table);
     }
 }

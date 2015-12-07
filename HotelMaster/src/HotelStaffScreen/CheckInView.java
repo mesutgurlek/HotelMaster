@@ -18,12 +18,14 @@ import javafx.scene.text.Text;
 import javafx.util.Callback;
 
 import java.time.LocalDate;
+import java.util.Observable;
+import java.util.Observer;
 
 
 /**
  * Created by Heaven on 12/4/2015.
  */
-public class CheckInView extends Pane {
+public class CheckInView extends Pane implements Observer{
     private ObservableList<Room> data;
     private Button backButton;
     private Button processButton;
@@ -37,8 +39,17 @@ public class CheckInView extends Pane {
     private ImageView cashView, creditCardView;
     private RadioButton cashButton, creditCardButton;
     private ToggleGroup group;
+    private Hotel hotel;
+    private TableView table;
 
-    public CheckInView(){
+
+    public CheckInView(Hotel hotel){
+        this.hotel = hotel;
+        hotel.subscribe(this);
+
+        hotel.updateHotelRooms();
+        data = FXCollections.observableArrayList(hotel.getAvailableRooms());
+
         group = new ToggleGroup();
 
         backButton = new Button("Back");
@@ -191,7 +202,7 @@ public class CheckInView extends Pane {
                 return new CheckBoxTableCell<Room, Boolean>();
             }
         });
-        TableView table = new TableView();
+        table = new TableView();
         table.setItems(data);
         table.setLayoutX(0);
         table.setLayoutY(350);
@@ -401,5 +412,29 @@ public class CheckInView extends Pane {
 
     public void setTotalCostText(Label totalCostText) {
         this.totalCostText = totalCostText;
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        hotel.updateHotelRooms();
+        hotel.updateHotelCustomers();
+        hotel.updateHotelReservations();
+        data = FXCollections.observableArrayList(hotel.getAvailableRooms());
+        getChildren().removeAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
+                creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
+                departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
+                processButton, backButton, table);
+        nameField.setText("");
+        phoneField.setText("");
+        surnameField.setText("");
+        totalCost.setText("");
+        arrivalPicker.setValue(null);
+        departurePicker.setValue(null);
+
+        table.setItems(data);
+        getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
+                creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
+                departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
+                processButton, backButton, table);
     }
 }

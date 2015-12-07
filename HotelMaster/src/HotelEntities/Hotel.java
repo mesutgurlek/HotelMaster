@@ -5,11 +5,15 @@ import HotelStaffScreen.*;
 import javafx.collections.FXCollections;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 11/21/2015.
  */
-public class Hotel {
+public class Hotel extends Observable {
+    private ArrayList<Observer> observers;
+
     private HotelControllerFacade controller;
     private String name;
     private int numberOfRoom;
@@ -18,22 +22,36 @@ public class Hotel {
     private ArrayList<Customer> allCustomers;
     private ArrayList<Reservation> allReservations;
     private ArrayList<Room> availableRooms;
-    private LoginView loginView;
-    private MenuView menuView;
-    private CheckInView checkInView;
-    private CustomerListView customerListView;
-    private RoomEditorView roomEditorView;
+
 
     public Hotel(){
-        this.menuView = new MenuView();
-        this.loginView = new LoginView();
-        this.checkInView = new CheckInView();
-        this.customerListView = new CustomerListView();
-        this.roomEditorView = new RoomEditorView();
+        observers = new ArrayList<>();
 
-        controller = new HotelControllerFacade(this);
+        controller = new HotelControllerFacade();
         allRooms = controller.getAllRooms();
         availableRooms = controller.getAvailableRooms();
+    }
+
+    public void subscribe(Observer observer){
+        observers.add(observer);
+    }
+
+    public void unsubscribe(Observer observer){
+        observers.remove(observer);
+    }
+
+    public ArrayList<Observer> getObservers() {
+        return observers;
+    }
+
+    public void setObservers(ArrayList<Observer> observers) {
+        this.observers = observers;
+    }
+
+    public void notifyObservers(){
+        for(Observer o : observers){
+            o.update(this, this);
+        }
     }
 
     public void updateHotelRooms(){
@@ -52,45 +70,7 @@ public class Hotel {
         //Add updateView
     }
 
-    public CustomerListView getCustomerListView() {
-        return customerListView;
-    }
 
-    public RoomEditorView getRoomEditorView() {
-        return roomEditorView;
-    }
-
-    public void setRoomEditorView(RoomEditorView roomEditorView) {
-        this.roomEditorView = roomEditorView;
-    }
-
-    public void setCustomerListView(CustomerListView customerListView) {
-        this.customerListView = customerListView;
-    }
-
-    public CheckInView getCheckInView() {
-        return checkInView;
-    }
-
-    public void setCheckInView(CheckInView checkInView) {
-        this.checkInView = checkInView;
-    }
-
-    public MenuView getMenuView() {
-        return menuView;
-    }
-
-    public void setMenuView(MenuView menuView) {
-        this.menuView = menuView;
-    }
-
-    public LoginView getLoginView() {
-        return loginView;
-    }
-
-    public void setLoginView(LoginView loginView) {
-        this.loginView = loginView;
-    }
 
     public ArrayList<Room> getAvailableRooms(){ return availableRooms; }
 

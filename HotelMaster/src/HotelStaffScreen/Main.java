@@ -3,6 +3,7 @@ package HotelStaffScreen;
 import HotelEntities.Hotel;
 import HotelManagement.HotelControllerFacade;
 import HotelManagement.LoginController;
+import HotelManagement.MenuController;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,7 +15,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
     private static Stage primaryStage;
     private static Scene scene;
-    private Hotel hotel;
+    public static Hotel hotel;
     private HotelControllerFacade hotelController;
 
     public static void main(String[] args) {
@@ -25,9 +26,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.hotel = new Hotel();
-        this.hotelController = new HotelControllerFacade(hotel);
+        this.hotelController = new HotelControllerFacade();
 
-        scene = new Scene(hotel.getLoginView(), 900, 540);
+        LoginView loginView = new LoginView(hotel);
+        LoginController loginController = new LoginController(loginView);
+        scene = new Scene(loginView, 900, 540);
 
         primaryStage.setScene(scene);
         primaryStage.setTitle("HotelMaster");
@@ -41,4 +44,6 @@ public class Main extends Application {
         scene.setRoot(parent);
         primaryStage.setScene(scene);
     }
+
+
 }
