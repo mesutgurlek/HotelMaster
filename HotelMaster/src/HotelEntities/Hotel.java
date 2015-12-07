@@ -1,10 +1,7 @@
 package HotelEntities;
 
 import HotelManagement.HotelControllerFacade;
-import HotelStaffScreen.CheckInView;
-import HotelStaffScreen.CustomerListView;
-import HotelStaffScreen.LoginView;
-import HotelStaffScreen.MenuView;
+import HotelStaffScreen.*;
 import javafx.collections.FXCollections;
 
 import java.util.ArrayList;
@@ -25,12 +22,14 @@ public class Hotel {
     private MenuView menuView;
     private CheckInView checkInView;
     private CustomerListView customerListView;
+    private RoomEditorView roomEditorView;
 
     public Hotel(){
         this.menuView = new MenuView();
         this.loginView = new LoginView();
         this.checkInView = new CheckInView();
         this.customerListView = new CustomerListView();
+        this.roomEditorView = new RoomEditorView();
 
         controller = new HotelControllerFacade(this);
         allRooms = controller.getAllRooms();
@@ -55,6 +54,14 @@ public class Hotel {
 
     public CustomerListView getCustomerListView() {
         return customerListView;
+    }
+
+    public RoomEditorView getRoomEditorView() {
+        return roomEditorView;
+    }
+
+    public void setRoomEditorView(RoomEditorView roomEditorView) {
+        this.roomEditorView = roomEditorView;
     }
 
     public void setCustomerListView(CustomerListView customerListView) {

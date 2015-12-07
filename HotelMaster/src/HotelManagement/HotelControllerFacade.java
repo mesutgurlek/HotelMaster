@@ -1,10 +1,7 @@
 package HotelManagement;
 
 import HotelEntities.*;
-import HotelStaffScreen.CheckInView;
-import HotelStaffScreen.CustomerListView;
-import HotelStaffScreen.LoginView;
-import HotelStaffScreen.MenuView;
+import HotelStaffScreen.*;
 
 import java.sql.Date;
 import java.text.ParseException;
@@ -20,11 +17,13 @@ public class HotelControllerFacade {
     private MenuView menuView;
     private CheckInView checkInView;
     private CustomerListView customerListView;
+    private RoomEditorView roomEditorView;
 
     private LoginController loginController;
     private MenuController menuController;
     private CheckInController checkInController;
     private CustomerListController customerListController;
+    private RoomEditorController roomEditorController;
     private RoomController roomController;
     private CustomerController customerController;
     private ReservationController reservationController;
@@ -35,7 +34,9 @@ public class HotelControllerFacade {
         this.menuView = myHotel.getMenuView();
         this.checkInView = myHotel.getCheckInView();
         this.customerListView = myHotel.getCustomerListView();
+        this.roomEditorView = myHotel.getRoomEditorView();
 
+        roomEditorController = new RoomEditorController(roomEditorView);
         customerListController = new CustomerListController(customerListView);
         checkInController = new CheckInController(checkInView);
         menuController = new MenuController(menuView);

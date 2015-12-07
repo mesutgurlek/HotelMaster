@@ -22,8 +22,11 @@ public class MenuView extends Pane {
         customerListLogo.setLayoutX(300);
         customerListLogo.setLayoutY(100);
 
+        roomEditorLogo = new ImageView(getClass().getResource("icons/rooEditorIcon.png").toExternalForm());
+        roomEditorLogo.setLayoutX(700);
+        roomEditorLogo.setLayoutY(300);
 
-        getChildren().addAll(checkInLogo, customerListLogo);
+        getChildren().addAll(checkInLogo, customerListLogo, roomEditorLogo);
     }
 
     public ImageView getCheckInLogo() {
