@@ -206,6 +206,7 @@ public class CheckInView extends Pane implements Observer{
         table.setItems(data);
         table.setLayoutX(0);
         table.setLayoutY(350);
+        table.setMaxHeight(190);
         table.setEditable(true);
         table.getColumns().addAll(roomNo, floorNo, roomType, roomStatus, dailyPrice, childCount, adultCount,extraInfo, delCol);
         getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,

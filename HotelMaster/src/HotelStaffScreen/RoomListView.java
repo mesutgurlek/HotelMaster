@@ -1,7 +1,9 @@
 package HotelStaffScreen;
 
 import HotelEntities.Customer;
+import HotelEntities.Hotel;
 import HotelEntities.Room;
+import HotelEntities.RoomType;
 import HotelManagement.CustomerController;
 import HotelManagement.RoomController;
 import javafx.collections.FXCollections;
@@ -16,18 +18,25 @@ import javafx.scene.shape.Line;
 import javafx.util.Callback;
 
 import java.sql.Date;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 12/7/2015.
  */
-public class RoomListView extends Pane {
+public class RoomListView extends Pane implements Observer{
     private ObservableList<Room> data;
     private Line separator1;
     private Button backButton, processButton;
+    private TableView table;
+    private Hotel hotel;
 
-    public RoomListView(){
-        RoomController controller = new RoomController();
-        data = FXCollections.observableArrayList(controller.getAllRooms());
+    public RoomListView(Hotel hotel){
+        this.hotel = hotel;
+        hotel.subscribe(this);
+
+        hotel.updateHotelRooms();
+        data = FXCollections.observableArrayList(hotel.getRooms());
 
         backButton = new Button("Back");
         backButton.setLayoutX(700);
@@ -40,59 +49,106 @@ public class RoomListView extends Pane {
 
         separator1 = new Line(0,80, 950, 82);
 
-        TableColumn name = new TableColumn("Name");
-        name.setMinWidth(150);
-        name.setCellValueFactory(
-                new PropertyValueFactory<Customer, String>("name"));
-
         TableColumn roomNo = new TableColumn("Room No");
         roomNo.setMinWidth(100);
         roomNo.setCellValueFactory(
-                new PropertyValueFactory<Customer, Integer>("roomNo"));
+                new PropertyValueFactory<Room, Integer>("roomNo"));
 
-        TableColumn payment = new TableColumn("Payment");
-        payment.setMinWidth(100);
-        payment.setCellValueFactory(
-                new PropertyValueFactory<Customer, String>("payment"));
+        TableColumn floorNo = new TableColumn("Floor No");
+        floorNo.setMinWidth(100);
+        floorNo.setCellValueFactory(
+                new PropertyValueFactory<Room, Integer>("floorNo"));
 
-        TableColumn arrivalDate = new TableColumn("Arrival Date");
-        arrivalDate.setMinWidth(100);
-        arrivalDate.setCellValueFactory(
-                new PropertyValueFactory<Customer, Date>("arrivalDate"));
+        TableColumn roomType = new TableColumn("Room Type");
+        roomType.setMinWidth(100);
+        roomType.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("type"));
 
-        TableColumn departureDate = new TableColumn("Departure Date");
-        departureDate.setMinWidth(100);
-        departureDate.setCellValueFactory(
-                new PropertyValueFactory<Customer, Date>("departureDate"));
+        TableColumn roomStatus = new TableColumn("Room Status");
+        roomStatus.setMinWidth(100);
+        roomStatus.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("status"));
 
-        TableColumn totalCost = new TableColumn("Total Cost");
-        totalCost.setMinWidth(100);
-        totalCost.setCellValueFactory(
-                new PropertyValueFactory<Customer, Double>("totalCost"));
+        TableColumn dailyPrice = new TableColumn("Daily Price");
+        dailyPrice.setMinWidth(100);
+        dailyPrice.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("dailyPrice"));
 
-        TableColumn phoneNo = new TableColumn("Phone No");
-        phoneNo.setMinWidth(150);
-        phoneNo.setCellValueFactory(
-                new PropertyValueFactory<Customer, String>("phoneNo"));
+        TableColumn childCount = new TableColumn("Child Count");
+        childCount.setMinWidth(100);
+        childCount.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("childCount"));
 
+        TableColumn adultCount = new TableColumn("Adult Count");
+        adultCount.setMinWidth(100);
+        adultCount.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("adultCount"));
+
+        TableColumn extraInfo = new TableColumn("Extra Info");
+        extraInfo.setMinWidth(100);
+        extraInfo.setCellValueFactory(
+                new PropertyValueFactory<Room, RoomType>("extraInfo"));
 
         //"Checkbox" column
-        TableColumn delCol = new TableColumn<Customer, Boolean>();
+        TableColumn delCol = new TableColumn<Room, Boolean>();
         delCol.setText("Delete");
         delCol.setMinWidth(100);
         delCol.setCellValueFactory(new PropertyValueFactory("checkbox"));
-        delCol.setCellFactory(new Callback<TableColumn<Customer, Boolean>, TableCell<Customer, Boolean>>() {
-            public TableCell<Customer, Boolean> call(TableColumn<Customer, Boolean> p) {
-                return new CheckBoxTableCell<Customer, Boolean>();
+        delCol.setCellFactory(new Callback<TableColumn<Room, Boolean>, TableCell<Room, Boolean>>() {
+            public TableCell<Room, Boolean> call(TableColumn<Room, Boolean> p) {
+                return new CheckBoxTableCell<Room, Boolean>();
             }
         });
-        TableView table = new TableView();
+        table = new TableView();
         table.setItems(data);
         table.setLayoutX(0);
         table.setLayoutY(83);
         table.setEditable(true);
-        table.getColumns().addAll(name, roomNo, arrivalDate, departureDate,phoneNo, totalCost, payment, delCol);
+        table.getColumns().addAll(roomNo, floorNo, roomType, roomStatus, dailyPrice, childCount, adultCount,extraInfo, delCol);
 
         getChildren().addAll(backButton, processButton, separator1, table);
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        hotel.updateHotelRooms();
+        hotel.updateHotelCustomers();
+        hotel.updateHotelReservations();
+        data = FXCollections.observableArrayList(hotel.getRooms());
+        getChildren().removeAll(backButton, processButton, separator1, table);
+        table.setItems(data);
+        getChildren().addAll(backButton, processButton, separator1, table);
+    }
+
+    public Button getBackButton() {
+        return backButton;
+    }
+
+    public void setBackButton(Button backButton) {
+        this.backButton = backButton;
+    }
+
+    public ObservableList<Room> getData() {
+        return data;
+    }
+
+    public void setData(ObservableList<Room> data) {
+        this.data = data;
+    }
+
+    public Button getProcessButton() {
+        return processButton;
+    }
+
+    public void setProcessButton(Button processButton) {
+        this.processButton = processButton;
+    }
+
+    public TableView getTable() {
+        return table;
+    }
+
+    public void setTable(TableView table) {
+        this.table = table;
     }
 }
