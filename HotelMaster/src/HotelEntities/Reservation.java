@@ -1,5 +1,10 @@
 package HotelEntities;
 
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +21,10 @@ public class Reservation {
     private Date departureDate;
     private String phoneNo;
     private double totalCost;
-    private List<Observer> subscribedViews= new ArrayList<>();
+
+    //Updated items
+    private BooleanProperty checkbox;
+    private Boolean isSelected;
 
     public Reservation(String personName, int reservedRoomNo, Date arrivalDate, Date departureDate, String phoneNo, double totalCost) {
         this.personName = personName;
@@ -25,29 +33,15 @@ public class Reservation {
         this.departureDate = departureDate;
         this.phoneNo = phoneNo;
         this.totalCost = totalCost;
-    }
 
+        //Handles with choosing room
+        this.checkbox = new SimpleBooleanProperty(false);
+        this.checkbox.addListener(new ChangeListener<Boolean>() {
 
-    public void subscribe(Observer observer){
-        subscribedViews.add(observer);
-    }
-
-    public void unsubscribe(Observer observer){
-        subscribedViews.remove(observer);
-    }
-
-    public void notifyObservers(){
-        for(Observer o: subscribedViews){
-            o.notify();
-        }
-    }
-
-    public List<Observer> getSubscribedViews() {
-        return subscribedViews;
-    }
-
-    public void setSubscribedViews(List<Observer> subscribedViews) {
-        this.subscribedViews = subscribedViews;
+            public void changed(ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) {
+                isSelected = t1;
+            }
+        });
     }
 
     public String getPersonName() {
@@ -96,5 +90,17 @@ public class Reservation {
 
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
+    }
+
+    public boolean getCheckbox() {
+        return checkbox.get();
+    }
+
+    public BooleanProperty checkboxProperty() {
+        return checkbox;
+    }
+
+    public void setCheckbox(boolean checkbox) {
+        this.checkbox.set(checkbox);
     }
 }

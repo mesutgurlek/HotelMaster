@@ -1,9 +1,6 @@
 package HotelManagement;
 
-import HotelEntities.Customer;
-import HotelEntities.Hotel;
-import HotelEntities.Room;
-import HotelEntities.RoomStatus;
+import HotelEntities.*;
 import HotelStaffScreen.CheckInView;
 import HotelStaffScreen.Main;
 import HotelStaffScreen.MenuView;
@@ -27,12 +24,14 @@ public class CheckInController {
     private String paymentMethod;
     private CustomerController customerController;
     private RoomController roomController;
+    private ReservationController reservationController;
 
     public CheckInController(CheckInView checkInView){
         this.checkInView = checkInView;
         this.paymentMethod = "";
         this.customerController = new CustomerController();
         this.roomController = new RoomController();
+        this.reservationController = new ReservationController();
 
         checkInView.getBackButton().setOnAction(e -> {
             MenuView menuView = new MenuView(Main.hotel);
@@ -103,7 +102,41 @@ public class CheckInController {
                 System.out.println("observer" + o.toString());
             }
             Main.hotel.notifyObservers();
+        });
 
+        checkInView.getMakeReservation().setOnAction(e->{
+            String name = checkInView.getNameField().getText() + " " + checkInView.getSurnameField().getText();
+            Double totalcost = Double.parseDouble(checkInView.getTotalCost().getText());
+            String phoneNo = checkInView.getPhoneField().getText();
+            ObservableList<Room> rooms = checkInView.getData();
+            int roomNo = 0;
+            Room selectedRoom = null;
+            for(Room r : rooms){
+                if(r.getCheckbox()){
+                    roomNo = r.getRoomNo();
+                    selectedRoom = r;
+                }
+            }
+            //Gets arrival date
+            LocalDate localDate = checkInView.getArrivalPicker().getValue();
+            Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+            Date arrivalDate =  new Date(Date.from(instant).getTime());
+
+            //Gets Departure date
+            localDate = checkInView.getDeparturePicker().getValue();
+            instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+            Date departureDate =  new Date(Date.from(instant).getTime());
+
+
+            Reservation reservation = new Reservation(name, roomNo, arrivalDate, departureDate,phoneNo, totalcost);
+            reservationController.addReservation(reservation);
+
+            roomController.updateRoom(roomNo, "reserved");
+
+            for(Observer o : Main.hotel.getObservers()){
+                System.out.println("observer" + o.toString());
+            }
+            Main.hotel.notifyObservers();
         });
     }
 }

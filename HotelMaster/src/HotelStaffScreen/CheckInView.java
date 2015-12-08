@@ -28,7 +28,7 @@ import java.util.Observer;
 public class CheckInView extends Pane implements Observer{
     private ObservableList<Room> data;
     private Button backButton;
-    private Button processButton;
+    private Button processButton, makeReservation;
     private TextField nameField, surnameField, phoneField;
     private Label nameText, surnameText, phoneText;
     private DatePicker arrivalPicker, departurePicker;
@@ -53,13 +53,17 @@ public class CheckInView extends Pane implements Observer{
         group = new ToggleGroup();
 
         backButton = new Button("Back");
-        backButton.setLayoutX(700);
+        backButton.setLayoutX(600);
         backButton.setLayoutY(25);
         backButton.setMinWidth(50);
 
         processButton = new Button("Process Check-In");
         processButton.setLayoutX(800);
         processButton.setLayoutY(25);
+
+        makeReservation = new Button("Make Reservation");
+        makeReservation.setLayoutX(675);
+        makeReservation.setLayoutY(25);
 
         separator1 = new Line(0,80, 950, 82);
 
@@ -212,7 +216,7 @@ public class CheckInView extends Pane implements Observer{
         getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table);
+                processButton, backButton, table, makeReservation);
     }
 
     public Button getBackButton() {
@@ -415,6 +419,14 @@ public class CheckInView extends Pane implements Observer{
         this.totalCostText = totalCostText;
     }
 
+    public Button getMakeReservation() {
+        return makeReservation;
+    }
+
+    public void setMakeReservation(Button makeReservation) {
+        this.makeReservation = makeReservation;
+    }
+
     @Override
     public void update(Observable o, Object arg) {
         hotel.updateHotelRooms();
@@ -424,7 +436,7 @@ public class CheckInView extends Pane implements Observer{
         getChildren().removeAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table);
+                processButton, backButton, table, makeReservation);
         nameField.setText("");
         phoneField.setText("");
         surnameField.setText("");
@@ -436,6 +448,6 @@ public class CheckInView extends Pane implements Observer{
         getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table);
+                processButton, backButton, table, makeReservation);
     }
 }

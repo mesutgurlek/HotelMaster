@@ -48,29 +48,6 @@ public class Room {
             }
         });
     }
-///////////////////////
-    public void subscribe(Observer observer){
-        subscribedViews.add(observer);
-    }
-
-    public void unsubscribe(Observer observer){
-        subscribedViews.remove(observer);
-    }
-
-    public void notifyObservers(){
-        for(Observer o: subscribedViews){
-            o.notify();
-        }
-    }
-
-    public List<Observer> getSubscribedViews() {
-        return subscribedViews;
-    }
-
-    public void setSubscribedViews(List<Observer> subscribedViews) {
-        this.subscribedViews = subscribedViews;
-    }
-//////////////////////////////////////////
 
     public int getRoomNo() {
         return roomNo;

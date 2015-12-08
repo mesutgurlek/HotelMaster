@@ -56,5 +56,15 @@ public class MenuController {
                 Main.hotel.unsubscribe(menuView);
             }
         });
+
+        this.menuView.getReservationsLogo().setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                ReservationsListView reservationsListView = new ReservationsListView(Main.hotel);
+                ReservationListController reservationListController = new ReservationListController(reservationsListView);
+                Main.changeSceneRoot(reservationsListView);
+                Main.hotel.unsubscribe(menuView);
+            }
+        });
     }
 }

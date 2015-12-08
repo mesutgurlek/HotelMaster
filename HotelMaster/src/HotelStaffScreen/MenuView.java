@@ -38,7 +38,11 @@ public class MenuView extends Pane implements Observer{
         roomListLogo.setLayoutX(500);
         roomListLogo.setLayoutY(100);
 
-        getChildren().addAll(roomListLogo, checkInLogo, customerListLogo, roomEditorLogo);
+        reservationsLogo = new ImageView(getClass().getResource("icons/reservationsMenuIcon.png").toExternalForm());
+        reservationsLogo.setLayoutX(300);
+        reservationsLogo.setLayoutY(300);
+
+        getChildren().addAll(roomListLogo, checkInLogo, customerListLogo, roomEditorLogo, reservationsLogo);
     }
 
     public ImageView getCheckInLogo() {
