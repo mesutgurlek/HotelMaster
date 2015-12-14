@@ -13,6 +13,8 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 import javafx.util.Callback;
@@ -30,10 +32,15 @@ public class RoomListView extends Pane implements Observer{
     private Button backButton, processButton;
     private TableView table;
     private Hotel hotel;
+    private ImageView miniLogo;
 
     public RoomListView(Hotel hotel){
         this.hotel = hotel;
         hotel.subscribe(this);
+
+        miniLogo = new ImageView(getClass().getResource("icons/room_listmenu_icon.png").toExternalForm());
+        miniLogo.setLayoutX(0);
+        miniLogo.setLayoutY(0);
 
         hotel.updateHotelRooms();
         data = FXCollections.observableArrayList(hotel.getRooms());
@@ -106,7 +113,7 @@ public class RoomListView extends Pane implements Observer{
         table.setEditable(true);
         table.getColumns().addAll(roomNo, floorNo, roomType, roomStatus, dailyPrice, childCount, adultCount,extraInfo, delCol);
 
-        getChildren().addAll(backButton, processButton, separator1, table);
+        getChildren().addAll(miniLogo, backButton, processButton, separator1, table);
     }
 
     @Override
@@ -115,9 +122,9 @@ public class RoomListView extends Pane implements Observer{
         hotel.updateHotelCustomers();
         hotel.updateHotelReservations();
         data = FXCollections.observableArrayList(hotel.getRooms());
-        getChildren().removeAll(backButton, processButton, separator1, table);
+        getChildren().removeAll(miniLogo, backButton, processButton, separator1, table);
         table.setItems(data);
-        getChildren().addAll(backButton, processButton, separator1, table);
+        getChildren().addAll(miniLogo, backButton, processButton, separator1, table);
     }
 
     public Button getBackButton() {

@@ -31,7 +31,7 @@ public class CheckInView extends Pane implements Observer{
     private Button processButton, makeReservation;
     private TextField nameField, surnameField, phoneField;
     private Label nameText, surnameText, phoneText;
-    private DatePicker arrivalPicker, departurePicker;
+    private HotelDatePicker arrivalPicker, departurePicker;
     private Label arrivalText, departureText;
     private Line separator1, separator2, separator3;
     private Button calculateCostButton;
@@ -41,11 +41,16 @@ public class CheckInView extends Pane implements Observer{
     private ToggleGroup group;
     private Hotel hotel;
     private TableView table;
+    private ImageView miniLogo;
 
 
     public CheckInView(Hotel hotel){
         this.hotel = hotel;
         hotel.subscribe(this);
+
+        miniLogo = new ImageView(getClass().getResource("icons/check_inMenu_icon.png").toExternalForm());
+        miniLogo.setLayoutX(0);
+        miniLogo.setLayoutY(0);
 
         hotel.updateHotelRooms();
         data = FXCollections.observableArrayList(hotel.getAvailableRooms());
@@ -101,7 +106,7 @@ public class CheckInView extends Pane implements Observer{
         arrivalText.setLayoutX(100);
         arrivalText.setLayoutY(150);
 
-        arrivalPicker = new DatePicker();
+        arrivalPicker = new HotelDatePicker();
         arrivalPicker.setLayoutX(100);
         arrivalPicker.setLayoutY(180);
 
@@ -109,7 +114,7 @@ public class CheckInView extends Pane implements Observer{
         departureText.setLayoutX(350);
         departureText.setLayoutY(150);
 
-        departurePicker = new DatePicker();
+        departurePicker = new HotelDatePicker(1);
         departurePicker.setLayoutX(350);
         departurePicker.setLayoutY(180);
 
@@ -182,12 +187,12 @@ public class CheckInView extends Pane implements Observer{
                 new PropertyValueFactory<Room, RoomType>("dailyPrice"));
 
         TableColumn childCount = new TableColumn("Child Count");
-        childCount.setMinWidth(100);
+        childCount.setMinWidth(70);
         childCount.setCellValueFactory(
                 new PropertyValueFactory<Room, RoomType>("childCount"));
 
         TableColumn adultCount = new TableColumn("Adult Count");
-        adultCount.setMinWidth(100);
+        adultCount.setMinWidth(70);
         adultCount.setCellValueFactory(
                 new PropertyValueFactory<Room, RoomType>("adultCount"));
 
@@ -216,7 +221,7 @@ public class CheckInView extends Pane implements Observer{
         getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table, makeReservation);
+                processButton, backButton, table, makeReservation, miniLogo);
     }
 
     public Button getBackButton() {
@@ -247,7 +252,7 @@ public class CheckInView extends Pane implements Observer{
         return arrivalPicker;
     }
 
-    public void setArrivalPicker(DatePicker arrivalPicker) {
+    public void setArrivalPicker(HotelDatePicker arrivalPicker) {
         this.arrivalPicker = arrivalPicker;
     }
 
@@ -303,7 +308,7 @@ public class CheckInView extends Pane implements Observer{
         return departurePicker;
     }
 
-    public void setDeparturePicker(DatePicker departurePicker) {
+    public void setDeparturePicker(HotelDatePicker departurePicker) {
         this.departurePicker = departurePicker;
     }
 
@@ -436,7 +441,7 @@ public class CheckInView extends Pane implements Observer{
         getChildren().removeAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table, makeReservation);
+                processButton, backButton, table, makeReservation, miniLogo);
         nameField.setText("");
         phoneField.setText("");
         surnameField.setText("");
@@ -448,6 +453,6 @@ public class CheckInView extends Pane implements Observer{
         getChildren().addAll(calculateCostButton, totalCostText, totalCost, cashButton, creditCardButton, cashView,
                 creditCardView,paymentMethodText, separator1, separator2, separator3, arrivalPicker, arrivalText,
                 departurePicker, departureText, nameText, surnameText, phoneText, nameField, surnameField, phoneField,
-                processButton, backButton, table, makeReservation);
+                processButton, backButton, table, makeReservation, miniLogo);
     }
 }

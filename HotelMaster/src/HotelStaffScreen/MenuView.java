@@ -23,23 +23,23 @@ public class MenuView extends Pane implements Observer{
         hotel.subscribe(this);
 
         checkInLogo = new ImageView(getClass().getResource("icons/checkin_menu.png").toExternalForm());
-        checkInLogo.setLayoutX(100);
-        checkInLogo.setLayoutY(100);
+        checkInLogo.setLayoutX(50);
+        checkInLogo.setLayoutY(25);
 
         customerListLogo = new ImageView(getClass().getResource("icons/customerListIcon.png").toExternalForm());
         customerListLogo.setLayoutX(300);
-        customerListLogo.setLayoutY(100);
-
-        roomEditorLogo = new ImageView(getClass().getResource("icons/rooEditorIcon.png").toExternalForm());
-        roomEditorLogo.setLayoutX(700);
-        roomEditorLogo.setLayoutY(300);
+        customerListLogo.setLayoutY(25);
 
         roomListLogo = new ImageView(getClass().getResource("icons/roomListViewIcon.png").toExternalForm());
-        roomListLogo.setLayoutX(500);
-        roomListLogo.setLayoutY(100);
+        roomListLogo.setLayoutX(600);
+        roomListLogo.setLayoutY(25);
+
+        roomEditorLogo = new ImageView(getClass().getResource("icons/roomEditorIcon.png").toExternalForm());
+        roomEditorLogo.setLayoutX(550);
+        roomEditorLogo.setLayoutY(300);
 
         reservationsLogo = new ImageView(getClass().getResource("icons/reservationsMenuIcon.png").toExternalForm());
-        reservationsLogo.setLayoutX(300);
+        reservationsLogo.setLayoutX(150);
         reservationsLogo.setLayoutY(300);
 
         getChildren().addAll(roomListLogo, checkInLogo, customerListLogo, roomEditorLogo, reservationsLogo);

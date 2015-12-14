@@ -32,11 +32,16 @@ public class ReservationsListView extends Pane implements Observer{
     private Button backButton, processButton, deleteButton;
     private TableView table;
     private Hotel hotel;
+    private ImageView miniLogo;
 
 
     public ReservationsListView(Hotel hotel){
         this.hotel = hotel;
         hotel.subscribe(this);
+
+        miniLogo = new ImageView(getClass().getResource("icons/reservations_listmenu_icon.png").toExternalForm());
+        miniLogo.setLayoutX(0);
+        miniLogo.setLayoutY(0);
 
         hotel.updateHotelReservations();
         data = FXCollections.observableArrayList(hotel.getReservations());
@@ -131,7 +136,7 @@ public class ReservationsListView extends Pane implements Observer{
         table.setEditable(true);
         table.getColumns().addAll(name, roomNo, arrivalDate, departureDate, phoneNo, totalCost, delCol);
 
-        getChildren().addAll(paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
+        getChildren().addAll(miniLogo,paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
     }
 
     @Override
@@ -140,9 +145,9 @@ public class ReservationsListView extends Pane implements Observer{
         hotel.updateHotelCustomers();
         hotel.updateHotelReservations();
         data = FXCollections.observableArrayList(hotel.getReservations());
-        getChildren().removeAll(paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
+        getChildren().removeAll(miniLogo,paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
         table.setItems(data);
-        getChildren().addAll(paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
+        getChildren().addAll(miniLogo, paymentMethodText, backButton, processButton,deleteButton, separator1, cashButton, cashView, creditCardButton, creditCardView, table);
     }
 
     public Button getBackButton() {

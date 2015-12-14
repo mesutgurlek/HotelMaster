@@ -2,6 +2,7 @@ package HotelStaffScreen;
 
 import HotelEntities.Hotel;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;
 
@@ -21,10 +22,19 @@ public class RoomEditorView extends Pane implements Observer{
     private TextField roomNoField, floorNoField, dailyPriceField, adultCountField, childCountField;
     private TextArea extraInfoField;
     private Hotel hotel;
+    private ImageView miniLogo, infoImage;
 
     public RoomEditorView(Hotel hotel){
         this.hotel = hotel;
         hotel.subscribe(this);
+
+        miniLogo = new ImageView(getClass().getResource("icons/room_editormenu_icon.png").toExternalForm());
+        miniLogo.setLayoutX(0);
+        miniLogo.setLayoutY(0);
+
+        infoImage = new ImageView(getClass().getResource("icons/room_Info.png").toExternalForm());
+        infoImage.setLayoutX(400);
+        infoImage.setLayoutY(150);
 
         backButton = new Button("Back");
         backButton.setLayoutX(700);
@@ -107,7 +117,7 @@ public class RoomEditorView extends Pane implements Observer{
         extraInfoField.setLayoutX(150);
         extraInfoField.setLayoutY(400);
 
-        getChildren().addAll(extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
+        getChildren().addAll(infoImage, miniLogo, extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
     }
 
 
@@ -182,13 +192,13 @@ public class RoomEditorView extends Pane implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         hotel.updateHotelRooms();
-        getChildren().removeAll(extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
+        getChildren().removeAll(infoImage, miniLogo, extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
         extraInfoField.setText("");
         roomNoField.setText("");
         floorNoField.setText("");
         dailyPriceField.setText("");
         adultCountField.setText("");
         childCountField.setText("");
-        getChildren().addAll(extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
+        getChildren().addAll(infoImage, miniLogo, extraInfoField, extraInfoLabel, childCountField, childCountLabel, adultCountField, adultCountLabel, dailyPriceField, dailyPriceLabel, floorNoLabel, floorNoField, roomNolabel, roomNoField, roomTypeLabel, roomTypeBox, separator1, backButton, confirmButton);
     }
 }

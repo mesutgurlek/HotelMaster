@@ -23,14 +23,20 @@ public class LoginView extends Pane implements Observer {
     private Label passwordText;
     private ImageView logo;
     private Hotel hotel;
+    private ImageView loginImage1;
 
     public LoginView(Hotel hotel) {
         this.hotel = hotel;
         hotel.subscribe(this);
 
+        loginImage1 = new ImageView(getClass().getResource("icons/hotel_WelcomePage.png").toExternalForm());
+        loginImage1.setLayoutX(450);
+        loginImage1.setLayoutY(60);
+
+
         logo = new ImageView(getClass().getResource("icons/logo.png").toExternalForm());
-        logo.setLayoutX(180);
-        logo.setLayoutY(30);
+        logo.setLayoutX(200);
+        logo.setLayoutY(0);
 
         usernameText = new Label("Username:  ");
         usernameText.setLayoutX(150);
@@ -55,7 +61,7 @@ public class LoginView extends Pane implements Observer {
         loginButton.setLayoutX(250);
         loginButton.setLayoutY(300);
 
-        getChildren().addAll(logo, usernameText, passwordText, usernameTextField, passwordField, loginButton);
+        getChildren().addAll(loginImage1, logo, usernameText, passwordText, usernameTextField, passwordField, loginButton);
     }
 
     public TextField getUsernameTextField() {
