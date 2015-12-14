@@ -1,6 +1,6 @@
 package HotelManagement;
 
-import DatabaseManagement.HotelStorage;
+import DatabaseManagement.HotelStorageFacade;
 import HotelEntities.Room;
 import HotelEntities.RoomStatus;
 import HotelEntities.RoomType;
@@ -11,10 +11,10 @@ import java.util.ArrayList;
  * Created by Heaven on 11/21/2015.
  */
 public class RoomController {
-    HotelStorage storage;
+    HotelStorageFacade storage;
 
     public RoomController() {
-        storage = new HotelStorage();
+        storage = new HotelStorageFacade();
     }
 
     public void addRoom(Room room){
@@ -25,8 +25,25 @@ public class RoomController {
         storage.deleteRoom(roomNo);
     }
 
+    public void updateRoom(int roomNo, String status){
+        storage.updateRoom(roomNo, status);
+    }
+
     public ArrayList<Room> getAllRooms(){
        return storage.getRooms();
+    }
+
+    public ArrayList<Room> getAvailableRooms(){
+        ArrayList<Room> allRooms = storage.getRooms();
+        ArrayList<Room> availableRooms = new ArrayList<>();
+
+        for( int i = 0; i < allRooms.size(); i++){
+            if(statusConverter(allRooms.get(i).getStatus()).equals("empty")){
+                availableRooms.add(allRooms.get(i));
+            }
+        }
+
+        return availableRooms;
     }
 
     public String typeConverter(RoomType type){

@@ -1,14 +1,20 @@
 package HotelEntities;
 
-import HotelManagement.HotelController;
+import HotelManagement.HotelControllerFacade;
+import HotelStaffScreen.*;
+import javafx.collections.FXCollections;
 
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Heaven on 11/21/2015.
  */
-public class Hotel {
-    private HotelController controller;
+public class Hotel extends Observable {
+    private ArrayList<Observer> observers;
+
+    private HotelControllerFacade controller;
     private String name;
     private int numberOfRoom;
     private int numberOfCustomer;
@@ -17,8 +23,35 @@ public class Hotel {
     private ArrayList<Reservation> allReservations;
     private ArrayList<Room> availableRooms;
 
+
     public Hotel(){
-        controller = new HotelController(this);
+        observers = new ArrayList<>();
+
+        controller = new HotelControllerFacade();
+        allRooms = controller.getAllRooms();
+        availableRooms = controller.getAvailableRooms();
+    }
+
+    public void subscribe(Observer observer){
+        observers.add(observer);
+    }
+
+    public void unsubscribe(Observer observer){
+        observers.remove(observer);
+    }
+
+    public ArrayList<Observer> getObservers() {
+        return observers;
+    }
+
+    public void setObservers(ArrayList<Observer> observers) {
+        this.observers = observers;
+    }
+
+    public void notifyObservers(){
+        for(Observer o : observers){
+            o.update(this, this);
+        }
     }
 
     public void updateHotelRooms(){
@@ -36,6 +69,8 @@ public class Hotel {
         this.allReservations = controller.getAllReservations();
         //Add updateView
     }
+
+
 
     public ArrayList<Room> getAvailableRooms(){ return availableRooms; }
 
