@@ -44,7 +44,7 @@ public class LoginController {
         }
         else {
             System.out.println("Wrong account information = " + username);
-            return true;
+            return false;
         }
 
     }
