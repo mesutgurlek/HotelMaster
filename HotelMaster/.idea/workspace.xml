@@ -10,54 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7134e919-2a6d-42f5-98fe-3dceaecdec37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/HotelDatePicker.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/familyRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/kingsRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/regularRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/reservations_mainMenu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/rooEditorIcon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/familyRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/kingsRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/regularRoom_icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/rooEditorIcon.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelEntities/Reservation.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelEntities/Reservation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelEntities/Room.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelEntities/Room.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelManagement/LoginController.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelManagement/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelManagement/MenuController.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelManagement/MenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CheckInView$1.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CheckInView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CheckInView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CheckInView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CustomerListView$1.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CustomerListView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CustomerListView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/CustomerListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/LoginView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/LoginView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/MenuView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/MenuView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomEditorView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomEditorView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomListView$1.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomListView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomListView.class" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/RoomListView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/bed_welcomePage.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/bed_welcomePage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/checkin_menu.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/checkin_menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/customerListIcon.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/customerListIcon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/customer_listMenu_icon.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/customer_listMenu_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/hotel_WelcomePage.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/hotel_WelcomePage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/logo.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/reservations_listMenu_icon.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/reservations_listMenu_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/roomListViewIcon.png" afterPath="$PROJECT_DIR$/out/production/HotelMaster/HotelStaffScreen/icons/roomListViewIcon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/bed_welcomePage.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/bed_welcomePage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/checkin_menu.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/checkin_menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/customerListIcon.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/customerListIcon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/customer_listMenu_icon.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/customer_listMenu_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/hotel_WelcomePage.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/hotel_WelcomePage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/logo.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/reservations_listMenu_icon.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/reservations_listMenu_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/icons/roomListViewIcon.png" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/icons/roomListViewIcon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" afterPath="$PROJECT_DIR$/src/HotelManagement/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/CheckInView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/CheckInView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/CustomerListView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/CustomerListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/LoginView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/MenuView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/MenuView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/ReservationsListView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/ReservationsListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/RoomEditorView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/RoomEditorView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HotelStaffScreen/RoomListView.java" afterPath="$PROJECT_DIR$/src/HotelStaffScreen/RoomListView.java" />
     </list>
     <ignored path="HotelMaster.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,8 +67,8 @@
       <file leaf-file-name="CheckInView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/CheckInView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48448277">
-              <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.92413795">
+              <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1034,7 +987,7 @@
       <workItem from="1449855632422" duration="1032000" />
       <workItem from="1449941069737" duration="4098000" />
       <workItem from="1450089906336" duration="4363000" />
-      <workItem from="1450097807030" duration="923000" />
+      <workItem from="1450097807030" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="Database Management Branch">
       <created>1447025096335</created>
@@ -1186,11 +1139,17 @@
       <option name="project" value="LOCAL" />
       <updated>1449603742498</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Last commit">
+      <created>1450098764455</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1450098764455</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144234000" />
+    <option name="totallyTimeSpent" value="144374000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1202,8 +1161,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1212,7 +1171,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34127843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34127843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15458423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1260,7 +1219,8 @@
     <MESSAGE value="CustomerList Screen Done!" />
     <MESSAGE value="RoomEditorView Done" />
     <MESSAGE value="Screens Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Screens Updated" />
+    <MESSAGE value="Last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1681,8 +1641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelStaffScreen/CheckInView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48448277">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.92413795">
+          <caret line="200" column="38" selection-start-line="200" selection-start-column="38" selection-end-line="200" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
